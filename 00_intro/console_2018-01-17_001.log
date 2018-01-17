@@ -1,0 +1,40 @@
+newtab:8 SW registered
+console.lo
+undefined
+console.log(sum(Range(1,10));
+VM278:1 Uncaught SyntaxError: missing ) after argument list
+console.log(sum(Range[1,10]);
+VM289:1 Uncaught SyntaxError: missing ) after argument list
+console.log(sum(Range[1,10]));
+VM292:1 Uncaught ReferenceError: sum is not defined
+    at <anonymous>:1:9
+(anonymous) @ VM292:1
+console.log(sum(Range(1,10)));
+VM295:1 Uncaught ReferenceError: sum is not defined
+    at <anonymous>:1:9
+(anonymous) @ VM295:1
+count = 1; total = 0;
+0
+while (total <= 10) {
+    total += count;
+    count++;
+}
+5
+console.log(total);
+VM430:1 15
+undefined
+while (count <= 10) {
+    total += count;
+    count++;
+}
+10
+count = 1; total = 0;
+0
+while (count <= 10) {
+    total += count;
+    count++;
+}
+10
+console.log(total);
+VM454:1 55
+undefined
