@@ -2,15 +2,6 @@
 http://eloquentjavascript.net/00_intro.html
 "always make sure you read and understand the example programs and exercises"
 
+The sandbox (http://eloquentjavascript.net/code/) on the website provides links to Zip files containing all of the scripts and data files necessary to run the code for a given chapter.
 
-count = 1; total = 0;
-0
-while (count <= 10) {
-    total += count;
-    count++;
-}
-10
-console.log(total);
-VM454:1 55
-undefined
-2018-01-17 22:02:43 
+2018-01-17 22:06:00
