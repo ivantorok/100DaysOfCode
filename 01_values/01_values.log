@@ -41,3 +41,4 @@ Infinity and -Infinity, which represent the positive and negative infinities. In
 NaN stands for “not a number”, even though it is a value of the number type. You’ll get this result when you, for example, try to calculate 0 / 0 (zero divided by zero), Infinity - Infinity, or any number of other numeric operations that don’t yield a precise, meaningful result.
 
 
+2018-01-18 21:47:45
