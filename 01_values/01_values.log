@@ -1,0 +1,43 @@
+2018-01-18 21:13:17
+http://eloquentjavascript.net/01_values.html
+
+Values
+   Numbers
+      Arithmetic
+      Special numbers
+   Strings
+      Unary operators
+   Boolean values
+      Comparisons
+      Logical operators
+         adn,or,not,(?:)
+   Undefined values
+      null vs. undefined
+   Automatic type conversion
+      type coercion
+      Further arithmetic operations on NaN keep producing NaN, so if you find yourself getting one of those in an unexpected place, look for accidental type conversions.
+      I recommend using the three-character comparison operators defensively to prevent unexpected type conversions from tripping you up.
+   Short-circuiting of logical operators
+      || operator to be used as a way to fall back on a default value. If you give it an expression that might produce an empty value on the left, the value on the right will be used as a replacement in that case.
+Summary
+   We looked at four types of JavaScript values in this chapter: numbers, strings, Booleans, and undefined values.
+   Such values are created by typing in their name (true, null) or value (13, "abc"). You can combine and transform values with operators. We saw binary operators for arithmetic (+, -, *, /, and %), string concatenation (+), comparison (==, !=, ===, !==, <, >, <=, >=), and logic (&&, ||), as well as several unary operators (- to negate a number, ! to negate logically, and typeof to find a value’s type) and a ternary operator (?:) to pick one of two values based on a third value.
+   This gives you enough information to use JavaScript as a pocket calculator, but not much more.
+
+There are six basic types of values in JavaScript: 
+- numbers, 
+- strings, 
+- Booleans, 
+- objects, 
+- functions, and 
+- undefined values.
+
+treat fractional digital numbers as approximations, not as precise values
+
+Putting an operator between two values will apply it to those values and produce a new value.
+
+Infinity and -Infinity, which represent the positive and negative infinities. Infinity - 1 is still Infinity, and so on.
+
+NaN stands for “not a number”, even though it is a value of the number type. You’ll get this result when you, for example, try to calculate 0 / 0 (zero divided by zero), Infinity - Infinity, or any number of other numeric operations that don’t yield a precise, meaningful result.
+
+

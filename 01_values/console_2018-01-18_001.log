@@ -1,0 +1,174 @@
+2.998e8
+299800000
+100 + 4 * 11
+144
+(100 + 4) * 11
+1144
+Infini
+VM133:1 Uncaught ReferenceError: Infini is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM133:1
+Infinity
+Infinity
+-Infinity
+-Infinity
+Infinity - 1
+Infinity
+Infinity - Infinity
+NaN
+0 / 0
+NaN
+"This is a string"
+"This is a string"
+'and this is a string too'
+"and this is a string too"
+"This is the first line\nAnd this is the second"
+"This is the first line
+And this is the second"
+"A new line character is written like \"\\n\"."
+"A new line character is written like "\n"."
+"con" + "ca" + "te" + "na" + "te"
+"concatenate"
+console.log(typeof 4.5)
+VM226:1 number
+undefined
+console.log(typeof "x")
+VM254:1 string
+undefined
+console.log(- (10 - 2))
+VM274:1 -8
+undefined
+console.log(3 > 2)
+VM432:1 true
+undefined
+console.log(3 < 2)
+VM448:1 false
+undefined
+console.log("Aardwark" < "Zotoaster")
+VM464:1 true
+undefined
+console.log("Aardwark" < "zotoaster")
+VM465:1 true
+undefined
+console.log("aardwark" < "Zotoaster")
+VM466:1 false
+undefined
+console.log("a" < "A")
+VM467:1 false
+undefined
+console.log("A" < "a")
+VM468:1 true
+undefined
+console.log("Z" < "a")
+VM469:1 true
+undefined
+console.log("Itchy" != "Scratchy")
+VM483:1 true
+undefined
+console.log(NaN
+VM521:1 Uncaught SyntaxError: missing ) after argument list
+console.log(NaN == NaN)
+VM531:1 false
+undefined
+console.log(true && false)
+VM565:1 false
+undefined
+console.log(true && true)
+VM609:1 true
+undefined
+console.log(false || true)
+VM673:1 true
+undefined
+console.log(false || false)
+VM727:1 false
+undefined
+!false
+true
+!true
+false
+1 + 1 == 2 && 10 * 10 > 50
+true
+console.log(true?1:2)
+VM790:1 1
+undefined
+console.log(false?1:2)
+VM807:1 2
+undefined
+console.log(8 * null)
+VM843:1 0
+undefined
+console.log("5" - 1)
+VM850:1 4
+undefined
+console.log("5" + 1)
+VM851:1 51
+undefined
+console.log("five" * 2)
+VM852:1 NaN
+undefined
+console.log(false == 0)
+VM863:1 true
+undefined
+console.log(null == undefined)
+VM923:1 true
+undefined
+console.log(null = 0)
+VM947:1 Uncaught ReferenceError: Invalid left-hand side in assignment
+console.log(null == 0)
+VM948:1 false
+undefined
+console.log(null == 0);
+VM950:1 false
+undefined
+console.log("" == 0);
+VM957:1 true
+undefined
+console.log("" == false);
+VM968:1 true
+undefined
+console.log("" == NaN;
+VM985:1 Uncaught SyntaxError: missing ) after argument list
+console.log("" == NaN);
+VM988:1 false
+undefined
+console.log("" == false);
+VM989:1 true
+undefined
+console.log("" === false);
+VM990:1 false
+undefined
+console.log("" == 0);
+VM991:1 true
+undefined
+console.log("" === 0);
+VM992:1 false
+undefined
+console.log(null || "user")
+VM1014:1 user
+undefined
+console.log("sthing" || "user")
+VM1021:1 sthing
+undefined
+console.log("sthing" &&& "user")
+VM1022:1 Uncaught SyntaxError: Unexpected token &
+console.log("sthing" && "user")
+VM1023:1 user
+undefined
+console.log(null && "user")
+VM1032:1 null
+undefined
+console.log(undefined && "user")
+VM1057:1 undefined
+undefined
+console.log("" && "user")
+VM1074:1 
+undefined
+console.log(false && "user")
+VM1085:1 false
+undefined
+console.log(0 && "user")
+VM1094:1 0
+undefined
+console.log("sthing" && "user")
+VM1095:1 user
+undefined
