@@ -1,0 +1,126 @@
+prompt("Whassup????");
+alert("lkjsdaflk")
+;
+undefined
+"sdfasf"
+do {
+var yourName = prompt("Who are you?");
+} while (!yourName);
+console.log(yourName);
+undefined debugger eval code:1:1
+undefined
+console.log(yourName);
+asdfasdg debugger eval code:1:1
+undefined
+switch (prompt("Ehat is the weather like?")) {
+case "rainy":
+console.log("Remember to bring an umbrella.");
+break;
+case "sunny":
+console.log("Dress lightly.");
+case "cloudy":
+console.log("Go outside.");
+break
+;
+default:
+console.log("Unknown weather type!");
+break;
+}
+Dress lightly. debugger eval code:6:1
+Go outside. debugger eval code:8:1
+undefined
+switch (prompt("Ehat is the weather like?")) {
+case "rainy":
+console.log("Remember to bring an umbrella.");
+break;
+case "sunny":
+console.log("Dress lightly.");
+case "cloudy":
+console.log("Go outside.");
+break
+;
+default:
+console.log("Unknown weather type!");
+break;
+}
+Remember to bring an umbrella. debugger eval code:3:1
+undefined
+switch (prompt("Ehat is the weather like?")) {
+case "rainy":
+console.log("Remember to bring an umbrella.");
+break;
+case "sunny":
+console.log("Dress lightly.");
+case "cloudy":
+console.log("Go outside.");
+break
+;
+default:
+console.log("Unknown weather type!");
+break;
+}
+Go outside. debugger eval code:8:1
+undefined
+switch (prompt("Ehat is the weather like?")) {
+case "rainy":
+console.log("Remember to bring an umbrella.");
+break;
+case "sunny":
+console.log("Dress lightly.");
+case "cloudy":
+console.log("Go outside.");
+break
+;
+default:
+console.log("Unknown weather type!");
+break;
+}
+Unknown weather type! debugger eval code:12:1
+undefined
+switch (prompt("Ehat is the weather like?")) {
+case "rainy":
+console.log("Remember to bring an umbrella.");
+break;
+case "sunny":
+console.log("Dress lightly.");
+case "cloudy":
+console.log("Go outside.");
+break
+;
+default:
+console.log("Unknown weather type!");
+break;
+}
+Unknown weather type! debugger eval code:12:1
+undefined
+switch (prompt("Ehat is the weather like?")) {
+   case "rainy":
+      console.log("Remember to bring an umbrella.");
+      break;
+   case "sunny":
+      console.log("Dress lightly.");
+   case "cloudy":
+      console.log("Go outside.");
+      break;
+   default:
+      console.log("Unknown weather type!");
+      break;
+}
+Unknown weather type! debugger eval code:11:7
+undefined
+switch (prompt("Ehat is the weather like?")) {
+   case "rainy":
+      console.log("Remember to bring an umbrella.");
+      break;
+   case "sunny":
+      console.log("Dress lightly.");
+   case "cloudy":
+      console.log("Go outside.");
+      break;
+   default:
+      console.log("Unknown weather type!");
+      break;
+}
+Dress lightly. debugger eval code:6:7
+Go outside. debugger eval code:8:7
+undefined 
