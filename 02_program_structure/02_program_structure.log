@@ -11,3 +11,130 @@ Program Structure
    prompt and confirm
 
 2018-01-21 21:48:39
+
+2018-01-22 19:42:12
+
+   Control flow
+      Number
+      String
+      Boolean
+   Conditional execution
+      if
+         isNaN
+      while and do loops
+         block ==> {}
+         Indenting Code
+      for loops
+      Breaking Out of a Loop
+         break
+         continue
+      Updating variables succinctly
+         ++
+         --
+         +=
+         -=
+         *=
+      Dispatching on a value with switch
+      Capitalization
+         veryFirstStartsSmallOthersStartsCapital
+      Comments
+         // single line comment
+         /* block comment */
+
+conditional (if, else, switch)
+looping (while do, for)
+Variables
+"The environment is the set of variables that are defined."
+"Functions are special values that encapsulate a piece of program"
+
+Exercises
+
+1. Looping a triangle
+Write a loop that makes seven calls to console.log to output the following triangle:
+
+#
+##
+###
+####
+#####
+######
+#######
+It may be useful to know that you can find the length of a string by writing .length after it.
+
+
+
+// my solution
+var triangleBlock = "#"; var triangleLines = "";
+do {
+   triangleLines = triangleLines + triangleBlock;
+   console.log(triangleLines)
+} while (triangleLines.length < 7);
+
+
+2. FizzBuzz
+Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+
+When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+
+// my solution
+for (var number = 0; number <= 100; number++) {
+    output = "";
+	if((number % 3 == 0)) {
+      output = "Fizz";
+    }
+    if((number % 5 == 0)) {
+      output = output + "Buzz";
+    }
+//  console.log(output, number);
+	if(output.length == 0) {
+      console.log(number);
+    } else {
+      console.log(output);
+    }  
+}
+
+
+3. Chess board
+Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
+
+Passing this string to console.log should show something like this:
+
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+When you have a program that generates this pattern, define a variable size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
+
+
+// my solution
+
+var size = 8; // or var size = 7;
+var tableString = "";
+
+function flipField(field) {
+    if (field == " ") {
+                        field = "#";
+        } else {
+                        field = " ";
+        }
+    return field;
+}
+
+for (columns = 0 ; columns < size; columns += 1) {
+    for (rows = 0 ; rows < size; rows +=1) {
+        tableString = tableString + field;
+        field=flipField(field)
+    };
+    tableString = tableString + "\n";
+    if (size % 2 == 0) field=flipField(field)
+}
+
+console.log(tableString);
+
+
+2018-01-22 20:58:21
