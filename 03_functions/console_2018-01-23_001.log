@@ -1,0 +1,888 @@
+newtab:8 SW registered
+var square = function(x) {
+    return x * x;
+};
+undefined
+console.log(square(12));
+VM280:1 144
+undefined
+var makeNoise = function() {
+    console.log("Pling!");
+};
+undefined
+makeNoise();
+VM320:2 Pling!
+undefined
+var power = function(base, exponent) {
+    var result = 1;
+    for (var count = 0; count < exponent; count++) {
+        result *= base;
+    };
+    return result;
+};
+undefined
+console.log(power(2, 10));
+VM514:1 1024
+undefined
+var useless = function () {return};
+undefined
+useless();
+undefined
+var x = "outside";
+undefined
+var f1 = function() {
+    var x = "inside f1";
+};
+undefined
+f1();
+undefined
+console.log(x);
+VM704:1 outside
+undefined
+var f2 = function() {
+    x = "inside f2";
+};
+undefined
+f2();
+undefined
+console.log(x);
+VM779:1 inside f2
+undefined
+var landscape = function() {
+    var result = "";
+    var flat = function(size) {
+        for (var count = 0; count < size; count++) {
+            result += "_";
+        };
+        var
+VM910:7 Uncaught SyntaxError: Unexpected end of input
+var landscape = function() {
+    var result = "";
+    var flat = function(size) {
+        for (var count = 0; count < size; count++) {
+            result += "_";
+        };}
+    
+VM918:6 Uncaught SyntaxError: Unexpected end of input
+var landscape = function() {
+    var result = "";
+    var flat = function(size) {
+        for (var count = 0; count < size; count++) {
+            result += "_";
+        };}
+    
+VM919:6 Uncaught SyntaxError: Unexpected end of input
+var landscape = function() {
+    var result = "";
+    var flat = function(size) {
+        for (var count = 0; count < size; count++) {
+            result += "_";
+        };
+	};
+    
+VM920:7 Uncaught SyntaxError: Unexpected end of input
+var landscape = function() {
+    var result = "";
+    var flat = function(size) {
+        for (var count = 0; count < size; count++) {
+            result += "_";
+        };
+	};
+	var mountain = function(size) {
+    
+VM945:8 Uncaught SyntaxError: Unexpected end of input
+var landscape = function() {
+    var result = "";
+    var flat = function(size) {
+        for (var count = 0; count < size; count++) {
+            result += "_";
+        };
+	};
+	var mountain = function(size) {
+		result += "/";
+		for (var count = 0; count < size; count++) {
+			result += "'";
+        };
+		result +="\\";
+    };
+    
+VM1048:14 Uncaught SyntaxError: Unexpected end of input
+var landscape = function() {
+    var result = "";
+    var flat = function(size) {
+        for (var count = 0; count < size; count++) {
+            result += "_";
+        };
+	};
+	var mountain = function(size) {
+		result += "/";
+		for (var count = 0; count < size; count++) {
+			result += "'";
+        };
+		result +="\\";
+    };
+	flat(3);
+	mountain(4);
+	flat(6);
+	mountain(1);
+	flat(1);
+	return result;
+};
+    
+undefined
+console.log(landscape());
+VM1235:1 ___/''''\______/'\_
+undefined
+var launchMissiles = function(value) {
+    missileSystem.launch("now");
+};
+undefined
+if (saveMode)
+    launchMissiles = function(value) {/* do nothing */};
+VM1373:1 Uncaught ReferenceError: saveMode is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1373:1
+if (safeMode)
+    launchMissiles = function(value) {/* do nothing */};
+VM1378:1 Uncaught ReferenceError: safeMode is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1378:1
+var safeMode = true;
+undefined
+if (safeMode)
+    launchMissiles = function(value) {/* do nothing */};
+ƒ (value) {/* do nothing */}
+safeMode = !safeMode
+false
+if (safeMode)
+    launchMissiles = function(value) {/* do nothing */};
+undefined
+console.log("The future says:", future());
+VM1450:1 Uncaught ReferenceError: future is not defined
+    at <anonymous>:1:9
+(anonymous) @ VM1450:1
+function future(){
+    return "We STILL have no flying cars.";
+}
+undefined
+console.log("The future says:", future());
+VM1480:1 The future says: We STILL have no flying cars.
+undefined
+console.log("The future says:", backToTheFuture());
+
+function backToTheFuture() {
+  return "We STILL have no flying cars.";
+}
+VM1503:1 The future says: We STILL have no flying cars.
+undefined
+function example() {}
+undefined
+function greet(who) {
+    console.log("Hello " + who);
+}
+undefined
+greet("Harry");
+VM1596:2 Hello Harry
+undefined
+console.log("Bye");
+VM1626:1 Bye
+undefined
+function chicken(){
+    return egg();
+};
+undefined
+function egg() {
+    return chicken();
+}
+undefined
+console.log(chicken() + " came first.");
+VM1736:1 Uncaught RangeError: Maximum call stack size exceeded
+    at egg (<anonymous>:1:13)
+    at chicken (<anonymous>:2:12)
+    at egg (<anonymous>:2:12)
+    at chicken (<anonymous>:2:12)
+    at egg (<anonymous>:2:12)
+    at chicken (<anonymous>:2:12)
+    at egg (<anonymous>:2:12)
+    at chicken (<anonymous>:2:12)
+    at egg (<anonymous>:2:12)
+    at chicken (<anonymous>:2:12)
+egg @ VM1736:1
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+egg @ VM1736:2
+chicken @ VM1668:2
+function power(base, exponent) {
+    if (exponent == undefined)
+        exponent = 2;
+    var result = 1;
+    for (var count = 0 ; count < exponent; count++)
+        result *= base;
+    return result;
+}
+undefined
+console.log(power(4));
+VM1972:1 16
+undefined
+console.log(power(4, 3));
+VM1973:1 64
+undefined
+console.log("R", 2, "D", 2);
+VM1989:1 R 2 D 2
+undefined
+function wrapValue(n) {
+    var localVariable = n;
+    return function() { return localVariable; };
+}
+undefined
+var wrap1 = wrapValue(1);
+undefined
+var wrap2 = wrapValue(2);
+undefined
+console.log(wrap1());
+VM2135:1 1
+undefined
+console.log(wrap2());
+VM2140:1 2
+undefined
+function multiplier(factor) {
+    return function(number) {
+        return number * factor;
+    };
+}
+undefined
+var twice = multiplier(2);
+undefined
+console.log(twice(7));
+VM2262:1 14
+undefined
+function power(base, exponent) {
+    if (exponent == 0)
+        return 1;
+	else
+		return base * power(base, exponent - 1 );
+}
+undefined
+console.log(power(2,3));
+VM2394:1 8
+undefined
+function findSolution(target) {
+    function find(current, history) {
+        if (current == target)
+            return history;
+        else if (current > target)
+            return null;
+        else
+            return find(current + 5, "(" + history + " + 5)") ||
+                find(current * 3, "(" + history + " * 3)");
+    }
+    return find(1, "1");
+}
+undefined
+console.log(findSolution(24));
+VM2692:1 (((1 * 3) + 5) * 3)
+undefined
+console.log(findSolution(25));
+VM2693:1 null
+undefined
+console.log(findSolution(26));
+VM2694:1 (((((1 + 5) + 5) + 5) + 5) + 5)
+undefined
+console.log(findSolution(23));
+VM2695:1 (((1 + 5) * 3) + 5)
+undefined
+console.log(findSolution(3));
+VM2696:1 (1 * 3)
+undefined
+console.log(findSolution(4));
+VM2697:1 null
+undefined
+console.log(findSolution(5));
+VM2698:1 null
+undefined
+console.log(findSolution(6));
+VM2699:1 (1 + 5)
+undefined
+console.log(findSolution(0));
+VM2700:1 null
+undefined
+function findSolution(target) {
+    function find(current, history) {
+        if (current == target)
+            return history;
+        else if (current > target)
+            return null;
+        else
+            return find(current + 5, "(" + history + " + 5)") ||
+                find(current * 3, "(" + history + " * 3)");
+    }
+    return find(0, "0");
+}
+undefined
+console.log(findSolution(0));
+VM2703:1 0
+undefined
+console.log(findSolution(6));
+VM2701:2 Uncaught RangeError: Maximum call stack size exceeded
+    at find (<anonymous>:2:18)
+    at find (<anonymous>:8:20)
+    at find (<anonymous>:8:20)
+    at find (<anonymous>:9:17)
+    at find (<anonymous>:9:17)
+    at find (<anonymous>:9:17)
+    at find (<anonymous>:9:17)
+    at find (<anonymous>:9:17)
+    at find (<anonymous>:9:17)
+    at find (<anonymous>:9:17)
+find @ VM2701:2
+find @ VM2701:8
+find @ VM2701:8
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+find @ VM2701:9
+function findSolution(target) {
+    function find(current, history) {
+        if (current == target)
+            return history;
+        else if (current > target)
+            return null;
+        else
+            return find(current + 5, "(" + history + " + 5)") ||
+                if (!(current == 0))
+					find(current * 3, "(" + history + " * 3)");
+				return null;
+    }
+    return find(0, "0");
+}
+VM2774:9 Uncaught SyntaxError: Unexpected token if
+function findSolution(target) {
+    function find(current, history) {
+        if (current == target)
+            return history;
+        else if (current > target)
+            return null;
+        else if (current == 0)
+			return 0;
+		else
+            return find(current + 5, "(" + history + " + 5)") ||
+                find(current * 3, "(" + history + " * 3)");
+    }
+    return find(0, "0");
+}
+undefined
+console.log(findSolution(6));
+VM2917:1 0
+undefined
+console.log(findSolution(234));
+VM2918:1 0
+undefined
+function findSolution(target) {
+    function find(current, history) {
+        if (current == target)
+            return history;
+        else if (current > target)
+            return null;
+		else
+            return find(current + 5, "(" + history + " + 5)") ||
+                if (!(current == 0))
+					return 0;
+				else
+					find(current * 3, "(" + history + " * 3)");
+    }
+    return find(0, "0");
+}
+VM2965:9 Uncaught SyntaxError: Unexpected token if
+function findSolution(target) {
+    function find(current, history) {
+        if (current == target)
+            return history;
+        else if (current > target)
+            return null;
+		else
+            return find(current + 5, "(" + history + " + 5)") ||
+                {if (!(current == 0))
+					return 0;
+				else
+					find(current * 3, "(" + history + " * 3)");
+                };
+    }
+    return find(0, "0");
+}
+VM2966:9 Uncaught SyntaxError: Unexpected token !
+function findSolution(target) {
+    function find(current, history) {
+        if (current == target)
+            return history;
+        else if (current > target)
+            return null;
+		else
+            return find(current + 5, "(" + history + " + 5)") ||
+                {if (!(current == 0))
+					return 0;
+				else
+					find(current * 3, "(" + history + " * 3)");
+                }
+    }
+    return find(0, "0");
+}
+VM2969:9 Uncaught SyntaxError: Unexpected token !
+function printFarmInventory(cows, chickens) {
+    var cowString = String(cows);
+    while (cowString.length < 3)
+        cowString = "0" + cowString;
+    console.log(cowString + " Cows");
+    var chickenString = String(chicken);
+    while (chickenString.length < 3)
+        chickenSring = "0" + chickenString;
+    console.log(chickenString " Chickens");
+VM3317:9 Uncaught SyntaxError: missing ) after argument list
+function printFarmInventory(cows, chickens) {
+    var cowString = String(cows);
+    while (cowString.length < 3)
+        cowString = "0" + cowString;
+    console.log(cowString + " Cows");
+    var chickenString = String(chicken);
+    while (chickenString.length < 3)
+        chickenSring = "0" + chickenString;
+    console.log(chickenString " Chickens");
+}
+VM3321:9 Uncaught SyntaxError: missing ) after argument list
+function printFarmInventory(cows, chickens) {
+    var cowString = String(cows);
+    while (cowString.length < 3)
+        cowString = "0" + cowString;
+    console.log(cowString + " Cows");
+    var chickenString = String(chicken);
+    while (chickenString.length < 3)
+        chickenSring = "0" + chickenString;
+    console.log(chickenString + " Chickens");
+}
+undefined
+printFarmInventory(7, 11);
+VM3322:5 007 Cows
+VM3322:9 function chicken(){
+    return egg();
+} Chickens
+undefined
+function printFarmInventory(cows, chickens) {
+    var cowString = String(cows);
+    while (cowString.length < 3)
+        cowString = "0" + cowString;
+    console.log(cowString + " Cows");
+    var chickenString = String(chickens);
+    while (chickenString.length < 3)
+        chickenSring = "0" + chickenString;
+    console.log(chickenString + " Chickens");
+}
+undefined
+printFarmInventory(7, 11);
+VM3339:5 007 Cows
+function printFarmInventory(cows, chicks) {
+    var cowString = String(cows);
+    while (cowString.length < 3)
+        cowString = "0" + cowString;
+    console.log(cowString + " Cows");
+    var chicksString = String(chicks);
+    while (chicsString.length < 3)
+        chicksSring = "0" + chicksString;
+    console.log(chicksString + " Chickens");
+}
+function printFarmInventory(cows, chickens) {
+    var cowString = String(cows);
+    while (cowString.length < 3)
+        cowString = "0" + cowString;
+    console.log(cowString + " Cows");
+    var chickenString = String(chickens);
+    while (chickenString.length < 3)
+        chickenSring = "0" + chickenString;
+    console.log(chickenString + " Chickens");
+}
