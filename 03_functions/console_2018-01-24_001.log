@@ -1,0 +1,640 @@
+newtab:8 SW registered
+function printFarmInventory(cows, chickens) {
+  var cowString = String(cows);
+  while (cowString.length < 3)
+    cowString = "0" + cowString;
+  console.log(cowString + " Cows");
+  var chickenString = String(chickens);
+  while (chickenString.length < 3)
+    chickenString = "0" + chickenString;
+  console.log(chickenString + " Chickens");
+}
+printFarmInventory(7, 11);
+VM403:5 007 Cows
+VM403:9 011 Chickens
+undefined
+function printZeroPaddedWithLabel(number, label) {
+    var numberString = String(number);
+    while (numberString.length < 3)
+        numberString = "0" + numberString;
+    console.log(numberString + " " + label);
+}
+undefined
+function printFarmInventory(cows, chickens, pigs) {
+    printZeroPaddedWithLabel(cows, "Cows");
+    printZeroPaddedWithLabelchickens ,"Chickens");
+VM1015:3 Uncaught SyntaxError: Unexpected token )
+function printFarmInventory(cows, chickens, pigs) {
+    printZeroPaddedWithLabel(cows, "Cows");
+    printZeroPaddedWithLabelchickens ,"Chickens");
+	printZeroPaddedWithLabel(pigs, "Pigs");
+}
+VM1039:3 Uncaught SyntaxError: Unexpected token )
+function printFarmInventory(cows, chickens, pigs) {
+    printZeroPaddedWithLabel(cows, "Cows");
+    printZeroPaddedWithLabel(chickens ,"Chickens");
+	printZeroPaddedWithLabel(pigs, "Pigs");
+}
+undefined
+printFarmInventory(7,11,3);
+VM589:5 007 Cows
+VM589:5 011 Chickens
+VM589:5 003 Pigs
+undefined
+function zeroPad(number, width) {
+    var string = String(number);
+    while (string.length < width)
+        string = "0" + string;
+    return string;
+}
+undefined
+function printFarmInventory(cows, chickens, pigs) {
+    console.log(zeroPad(cows, 3) + " Cows");
+    console.log(zeroPad(chickens, 3) + " Chickens");
+    console.log(zeroPad(pigs, 3) + " Pigs");
+}
+undefined
+printFarmInventory(7,16,3);
+VM1326:2 007 Cows
+VM1326:3 016 Chickens
+VM1326:4 003 Pigs
+undefined
+function myMinFunction(a, b) {
+    if (a < b)
+        return a;
+    else
+        return b;
+}
+undefined
+console.log(myMinFunction(0,10);
+VM1449:1 Uncaught SyntaxError: missing ) after argument list
+console.log(myMinFunction(0,10));
+VM1456:1 0
+undefined
+console.log(myMinFunction(0,-10));
+VM1457:1 -10
+undefined
+function isEven(isThisEven) {
+    if (isThisEven == 0)
+        return true;
+    if (isThisEven == 1)
+        return false;
+    isEven(isThisEven - 2)
+}
+undefined
+isEven(50);
+undefined
+isEven(75);
+undefined
+console.log(isEven(50));
+VM1647:1 undefined
+undefined
+function isEven(isThisEven) {
+    if (isThisEven == 0)
+        return true;
+    if (isThisEven == 1)
+        return false;
+    return isEven(isThisEven - 2)
+}
+undefined
+console.log(isEven(50));
+VM1662:1 true
+undefined
+console.log(isEven(75));
+VM1663:1 false
+undefined
+console.log(isEven(-1));
+VM1660:1 Uncaught RangeError: Maximum call stack size exceeded
+    at isEven (<anonymous>:1:16)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+isEven @ VM1660:1
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+isEven @ VM1660:6
+function isEven(isThisEven) {
+    if (isThisEven == 0)
+        return true;
+    if (isThisEven == 1)
+        return false;
+    return isEven(abs(isThisEven) - 2)
+}
+undefined
+console.log(isEven(-1));
+VM1956:6 Uncaught ReferenceError: abs is not defined
+    at isEven (<anonymous>:6:5)
+    at <anonymous>:1:13
+isEven @ VM1956:6
+(anonymous) @ VM1958:1
+function isEven(isThisEven) {
+    if (isThisEven == 0)
+        return true;
+    if (isThisEven == 1)
+        return false;
+    return isEven(Math.abs(isThisEven) - 2)
+}
+undefined
+console.log(isEven(-1));
+VM1969:1 Uncaught RangeError: Maximum call stack size exceeded
+    at isEven (<anonymous>:1:16)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+    at isEven (<anonymous>:6:12)
+isEven @ VM1969:1
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+isEven @ VM1969:6
+function isEven(isThisEven) {
+    if (Math.abs(isThisEven) > 1)isThisEven == 0)
+        return true;
+    if (Math.abs(isThisEven) == 1)
+        return false;
+    return isEven(Math.abs(isThisEven) - 2)
+}
+VM2054:2 Uncaught SyntaxError: Unexpected token )
+function isEven(isThisEven) {
+    if (Math.abs(isThisEven) > 1)
+		return isEven(Math.abs(isThisEven) -2 )
+    else if (isThisEven == 0)
+        return true;
+	else
+        return false;
+}
+undefined
+console.log(isEven(-1));
+VM2141:1 false
+undefined
+console.log(isEven(-4));
+VM2142:1 true
+undefined
+function isEven(isThisEven) {
+    if (isThisEven < 0)
+		isThisEven = -isThisEven;
+	if (isThisEven) > 1)
+		return isEven(isThisEven -2 )
+    else if (isThisEven == 0)
+        return true;
+	else
+        return false;
+}
+VM2423:4 Uncaught SyntaxError: Unexpected token >
+function isEven(isThisEven) {
+    if (isThisEven < 0)
+		isThisEven = -isThisEven;
+	if (isThisEven > 1)
+		return isEven(isThisEven -2 )
+    else if (isThisEven == 0)
+        return true;
+	else
+        return false;
+}
+undefined
+console.log(isEven(-4));
+VM2428:1 true
+undefined
+console.log(isEven(-1));
+VM2430:1 false
+undefined
+function countBs(howManyBsHere) {
+	var thisManyBsHere = 0;
+    for (counter = 0 ; counter < howManyBsHere.length; counter++){
+        if (howManyBsHere.charAt(counter) == "B")
+            thisManyBsHere++
+        ]
+VM2633:6 Uncaught SyntaxError: Unexpected token ]
+function countBs(howManyBsHere) {
+	var thisManyBsHere = 0;
+    for (counter = 0 ; counter < howManyBsHere.length; counter++){
+        if (howManyBsHere.charAt(counter) == "B")
+            thisManyBsHere++
+    }
+    return thisManyBsHere;
+}
+undefined
+console.log(countBs("BBC"));
+VM2697:1 2
+undefined
+function countChar(howManyCharsHere, Chars) {
+    var thisManyCharsHere = 0;
+    for (counter = 0; counter < howManyCharsHere.length;counter ++) {
+        if (howManyCharsHere.charAt(counter) == Chars)
+            thisManyCharsHere++
+    }
+    return thisManyCharsHere;
+}
+undefined
+console.log(countChar("kakkerlak", "k"));
+VM3006:1 4
+undefined
+function countBs(howManyBsHere) {
+	return countChar(howManyBsHere, "B")
+}
+undefined
+console.log(countBs("BBC"));
+VM3126:1 2
+undefined
