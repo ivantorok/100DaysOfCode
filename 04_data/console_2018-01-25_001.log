@@ -1,0 +1,265 @@
+newtab:8 SW registered
+var listOfNumbers = [2,3,5,7,11];
+undefined
+console.log(listOfNumbers[2]);
+VM500:1 5
+undefined
+console.log(listOfNumbers[2 - 1]);
+VM504:1 3
+undefined
+console.log(listOfNumbers[0]);
+VM556:1 2
+undefined
+listOfNumbers.length
+5
+listOfNumbers[length]
+7
+listOfNumbers["length"]]
+VM602:1 Uncaught SyntaxError: Unexpected token ]
+listOfNumbers["length"]
+5
+listOfNumbers[length]
+7
+listOfNumbers[lengt]
+VM618:1 Uncaught ReferenceError: lengt is not defined
+    at <anonymous>:1:15
+(anonymous) @ VM618:1
+var doh = "Doh";
+undefined
+console.log(typeof doh.toUpperCase);
+VM683:1 function
+undefined
+console.log(doh.toUpperCase);
+VM696:1 ƒ toUpperCase() { [native code] }
+undefined
+console.log(doh.toUpperCase());
+VM699:1 DOH
+undefined
+var mack = [];
+undefined
+mack.push("Mack");
+1
+mack.push("the", "Knife");
+3
+console.log(mack);
+VM747:1 (3) ["Mack", "the", "Knife"]
+undefined
+console.log(mack.join(" "));
+VM787:1 Mack the Knife
+undefined
+console.log(mack.pop());
+VM815:1 Knife
+undefined
+console.log(mack);
+VM817:1 (2) ["Mack", "the"]
+undefined
+var day1 = {
+    squirrel: false,
+    events: ["work", "touched tree", "pizza", "running", "television"]
+};
+undefined
+console.log(day1.squirrel);
+VM886:1 false
+undefined
+console.log(day1.wolf);
+VM911:1 undefined
+undefined
+day1.wolf = false;
+false
+console.log(day1.wolf);
+VM941:1 false
+undefined
+var descriptions = {}
+undefined
+var descriptions = {
+	work: "Went to work",
+	"touched tree": "Touched a tree"
+};
+undefined
+var anObject = {left:1, right:2};
+undefined
+console.log(anObject.left);
+VM1054:1 1
+undefined
+delete anObject.left;
+true
+console.log(anObject.left);
+VM1084:1 undefined
+undefined
+console.log("left" in anObject);
+VM1112:1 false
+undefined
+console.log("right" in anObject);
+VM1136:1 true
+undefined
+var object1 = {value:10};
+undefined
+var object2 = object1;
+undefined
+var object3 = {value: 10};
+undefined
+console.log(object1 == object2);
+VM1232:1 true
+undefined
+console.log(object1 == object3);
+VM1237:1 false
+undefined
+object1.value = 15;
+15
+console.log(object2.value);
+VM1281:1 15
+undefined
+console.log(object3.value);
+VM1286:1 10
+undefined
+object2.value = 25;
+25
+console.log(object2.value);
+VM1293:1 25
+undefined
+console.log(object1.value);
+VM1298:1 25
+undefined
+var journal = [];
+undefined
+function addEntry(events, didITurnIntoASquirrel) {
+    journal.push({
+        events, events,
+        squirrel: didITurnIntoASquirrel
+    });
+}
+undefined
+addEntry(["work", "touched tree", "pizza", "running", "television"], false);
+undefined
+addEntry(["work", "ice cream", "cauliflower", "lasagna", "touched tree", "brushed teeth"], false);
+undefined
+addEntry(["weekend", "cycling", "break", "peanuts", "beer"], true);
+undefined
+function phi(table) {
+    return (table[3] * table[0] - table[2] * table[1]) /
+        Math.sqrt((table[2] + table[3]) *
+                  (table[0] + table[1]) *
+                  (table[1] + table[3]) *
+                  (table[0] + table[2]));
+    ]
+VM1923:7 Uncaught SyntaxError: Unexpected token ]
+function phi(table) {
+    return (table[3] * table[0] - table[2] * table[1]) /
+        Math.sqrt((table[2] + table[3]) *
+                  (table[0] + table[1]) *
+                  (table[1] + table[3]) *
+                  (table[0] + table[2]));
+}
+undefined
+console.log(phi([76, 9,4,1]));
+VM1963:1 0.06859943405700354
+undefined
+http://eloquentjavascript.net/code/jacques_journal.js
+;
+undefined
+journal
+(3) [{…}, {…}, {…}]0: {events: Array(5), squirrel: false}1: {events: Array(6), squirrel: false}2: events: (5) ["weekend", "cycling", "break", "peanuts", "beer"]squirrel: true__proto__: Objectlength: 3__proto__: Array(0)concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}__proto__: Object
+JOURNAL
+VM2185:1 Uncaught ReferenceError: JOURNAL is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2185:1
+var JOURNAL = [
+  {"events":["carrot","exercise","weekend"],"squirrel":false},
+  {"events":["bread","pudding","brushed teeth","weekend","touched tree"],"squirrel":false},
+  {"events":["carrot","nachos","brushed teeth","cycling","weekend"],"squirrel":false},
+  {"events":["brussel sprouts","ice cream","brushed teeth","computer","weekend"],"squirrel":false},
+  {"events":["potatoes","candy","brushed teeth","exercise","weekend","dentist"],"squirrel":false},
+  {"events":["brussel sprouts","pudding","brushed teeth","running","weekend"],"squirrel":false},
+  {"events":["pizza","brushed teeth","computer","work","touched tree"],"squirrel":false},
+  {"events":["bread","beer","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["cauliflower","brushed teeth","work"],"squirrel":false},
+  {"events":["pizza","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["lasagna","nachos","brushed teeth","work"],"squirrel":false},
+  {"events":["brushed teeth","weekend","touched tree"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","television","weekend"],"squirrel":false},
+  {"events":["spaghetti","brushed teeth","work"],"squirrel":false},
+  {"events":["brushed teeth","computer","work"],"squirrel":false},
+  {"events":["lettuce","nachos","brushed teeth","work"],"squirrel":false},
+  {"events":["carrot","brushed teeth","running","work"],"squirrel":false},
+  {"events":["brushed teeth","work"],"squirrel":false},
+  {"events":["cauliflower","reading","weekend"],"squirrel":false},
+  {"events":["bread","brushed teeth","weekend"],"squirrel":false},
+  {"events":["lasagna","brushed teeth","exercise","work"],"squirrel":false},
+  {"events":["spaghetti","brushed teeth","reading","work"],"squirrel":false},
+  {"events":["carrot","ice cream","brushed teeth","television","work"],"squirrel":false},
+  {"events":["spaghetti","nachos","work"],"squirrel":false},
+  {"events":["cauliflower","ice cream","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["spaghetti","peanuts","computer","weekend"],"squirrel":true},
+  {"events":["potatoes","ice cream","brushed teeth","computer","weekend"],"squirrel":false},
+  {"events":["potatoes","ice cream","brushed teeth","work"],"squirrel":false},
+  {"events":["peanuts","brushed teeth","running","work"],"squirrel":false},
+  {"events":["potatoes","exercise","work"],"squirrel":false},
+  {"events":["pizza","ice cream","computer","work"],"squirrel":false},
+  {"events":["lasagna","ice cream","work"],"squirrel":false},
+  {"events":["cauliflower","candy","reading","weekend"],"squirrel":false},
+  {"events":["lasagna","nachos","brushed teeth","running","weekend"],"squirrel":false},
+  {"events":["potatoes","brushed teeth","work"],"squirrel":false},
+  {"events":["carrot","work"],"squirrel":false},
+  {"events":["pizza","beer","work","dentist"],"squirrel":false},
+  {"events":["lasagna","pudding","cycling","work"],"squirrel":false},
+  {"events":["spaghetti","brushed teeth","reading","work"],"squirrel":false},
+  {"events":["spaghetti","pudding","television","weekend"],"squirrel":false},
+  {"events":["bread","brushed teeth","exercise","weekend"],"squirrel":false},
+  {"events":["lasagna","peanuts","work"],"squirrel":true},
+  {"events":["pizza","work"],"squirrel":false},
+  {"events":["potatoes","exercise","work"],"squirrel":false},
+  {"events":["brushed teeth","exercise","work"],"squirrel":false},
+  {"events":["spaghetti","brushed teeth","television","work"],"squirrel":false},
+  {"events":["pizza","cycling","weekend"],"squirrel":false},
+  {"events":["carrot","brushed teeth","weekend"],"squirrel":false},
+  {"events":["carrot","beer","brushed teeth","work"],"squirrel":false},
+  {"events":["pizza","peanuts","candy","work"],"squirrel":true},
+  {"events":["carrot","peanuts","brushed teeth","reading","work"],"squirrel":false},
+  {"events":["potatoes","peanuts","brushed teeth","work"],"squirrel":false},
+  {"events":["carrot","nachos","brushed teeth","exercise","work"],"squirrel":false},
+  {"events":["pizza","peanuts","brushed teeth","television","weekend"],"squirrel":false},
+  {"events":["lasagna","brushed teeth","cycling","weekend"],"squirrel":false},
+  {"events":["cauliflower","peanuts","brushed teeth","computer","work","touched tree"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","television","work"],"squirrel":false},
+  {"events":["potatoes","brushed teeth","computer","work"],"squirrel":false},
+  {"events":["bread","candy","work"],"squirrel":false},
+  {"events":["potatoes","nachos","work"],"squirrel":false},
+  {"events":["carrot","pudding","brushed teeth","weekend"],"squirrel":false},
+  {"events":["carrot","brushed teeth","exercise","weekend","touched tree"],"squirrel":false},
+  {"events":["brussel sprouts","running","work"],"squirrel":false},
+  {"events":["brushed teeth","work"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","running","work"],"squirrel":false},
+  {"events":["candy","brushed teeth","work"],"squirrel":false},
+  {"events":["brussel sprouts","brushed teeth","computer","work"],"squirrel":false},
+  {"events":["bread","brushed teeth","weekend"],"squirrel":false},
+  {"events":["cauliflower","brushed teeth","weekend"],"squirrel":false},
+  {"events":["spaghetti","candy","television","work","touched tree"],"squirrel":false},
+  {"events":["carrot","pudding","brushed teeth","work"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","work"],"squirrel":false},
+  {"events":["carrot","ice cream","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["pizza","brushed teeth","work"],"squirrel":false},
+  {"events":["spaghetti","peanuts","exercise","weekend"],"squirrel":true},
+  {"events":["bread","beer","computer","weekend","touched tree"],"squirrel":false},
+  {"events":["brushed teeth","running","work"],"squirrel":false},
+  {"events":["lettuce","peanuts","brushed teeth","work","touched tree"],"squirrel":false},
+  {"events":["lasagna","brushed teeth","television","work"],"squirrel":false},
+  {"events":["cauliflower","brushed teeth","running","work"],"squirrel":false},
+  {"events":["carrot","brushed teeth","running","work"],"squirrel":false},
+  {"events":["carrot","reading","weekend"],"squirrel":false},
+  {"events":["carrot","peanuts","reading","weekend"],"squirrel":true},
+  {"events":["potatoes","brushed teeth","running","work"],"squirrel":false},
+  {"events":["lasagna","ice cream","work","touched tree"],"squirrel":false},
+  {"events":["cauliflower","peanuts","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["pizza","brushed teeth","running","work"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","work"],"squirrel":false},
+  {"events":["bread","brushed teeth","television","weekend"],"squirrel":false},
+  {"events":["cauliflower","peanuts","brushed teeth","weekend"],"squirrel":false}
+];
+
+// This makes sure the data is exported in node.js —
+// `require('./path/to/04_data.js')` will get you the array.
+if (typeof module != "undefined" && module.exports)
+  module.exports = JOURNAL;
+undefined
+JOURNAL
+(90) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {events: Array(3), squirrel: false}1: {events: Array(5), squirrel: false}2: {events: Array(5), squirrel: false}3: {events: Array(5), squirrel: false}4: {events: Array(6), squirrel: false}5: {events: Array(5), squirrel: false}6: {events: Array(5), squirrel: false}7: {events: Array(5), squirrel: false}8: {events: Array(3), squirrel: false}9: {events: Array(4), squirrel: false}10: {events: Array(4), squirrel: false}11: {events: Array(3), squirrel: false}12: {events: Array(4), squirrel: false}13: {events: Array(3), squirrel: false}14: {events: Array(3), squirrel: false}15: {events: Array(4), squirrel: false}16: {events: Array(4), squirrel: false}17: {events: Array(2), squirrel: false}18: {events: Array(3), squirrel: false}19: {events: Array(3), squirrel: false}20: {events: Array(4), squirrel: false}21: {events: Array(4), squirrel: false}22: {events: Array(5), squirrel: false}23: {events: Array(3), squirrel: false}24: {events: Array(5), squirrel: false}25: {events: Array(4), squirrel: true}26: {events: Array(5), squirrel: false}27: {events: Array(4), squirrel: false}28: {events: Array(4), squirrel: false}29: {events: Array(3), squirrel: false}30: {events: Array(4), squirrel: false}31: {events: Array(3), squirrel: false}32: {events: Array(4), squirrel: false}33: {events: Array(5), squirrel: false}34: {events: Array(3), squirrel: false}35: {events: Array(2), squirrel: false}36: {events: Array(4), squirrel: false}37: {events: Array(4), squirrel: false}38: {events: Array(4), squirrel: false}39: {events: Array(4), squirrel: false}40: {events: Array(4), squirrel: false}41: {events: Array(3), squirrel: true}42: {events: Array(2), squirrel: false}43: {events: Array(3), squirrel: false}44: {events: Array(3), squirrel: false}45: {events: Array(4), squirrel: false}46: {events: Array(3), squirrel: false}47: {events: Array(3), squirrel: false}48: {events: Array(4), squirrel: false}49: {events: Array(4), squirrel: true}50: {events: Array(5), squirrel: false}51: {events: Array(4), squirrel: false}52: {events: Array(5), squirrel: false}53: {events: Array(5), squirrel: false}54: {events: Array(4), squirrel: false}55: {events: Array(6), squirrel: false}56: {events: Array(4), squirrel: false}57: {events: Array(4), squirrel: false}58: {events: Array(3), squirrel: false}59: {events: Array(3), squirrel: false}60: {events: Array(4), squirrel: false}61: {events: Array(5), squirrel: false}62: {events: Array(3), squirrel: false}63: {events: Array(2), squirrel: false}64: {events: Array(4), squirrel: false}65: {events: Array(3), squirrel: false}66: {events: Array(4), squirrel: false}67: {events: Array(3), squirrel: false}68: {events: Array(3), squirrel: false}69: {events: Array(5), squirrel: false}70: {events: Array(4), squirrel: false}71: {events: Array(3), squirrel: false}72: {events: Array(5), squirrel: false}73: {events: Array(3), squirrel: false}74: {events: Array(4), squirrel: true}75: {events: Array(5), squirrel: false}76: {events: Array(3), squirrel: false}77: events: (5) ["lettuce", "peanuts", "brushed teeth", "work", "touched tree"]squirrel: false__proto__: Object78: {events: Array(4), squirrel: false}79: {events: Array(4), squirrel: false}80: {events: Array(4), squirrel: false}81: {events: Array(3), squirrel: false}82: {events: Array(4), squirrel: true}83: {events: Array(4), squirrel: false}84: {events: Array(4), squirrel: false}85: {events: Array(5), squirrel: false}86: {events: Array(4), squirrel: false}87: {events: Array(3), squirrel: false}88: {events: Array(4), squirrel: false}89: {events: Array(4), squirrel: false}length: 90__proto__: Array(0)

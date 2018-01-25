@@ -1,0 +1,34 @@
+http://eloquentjavascript.net/04_data.html
+2018-01-25 19:17:09
+Data Structures: Objects and Arrays
+The weresquirrel
+   Data sets
+      JavaScript provides a data type specifically for storing sequences of values. It is called an array and is written as a list of values between square brackets, separated by commas.
+   Properties
+      myString.length ir Math.max
+      Both value.x and value[x] access a property on value—but not necessarily the same property. The difference is in how x is interpreted. When using a dot, the part after the dot must be a valid variable name, and it directly names the property. When using square brackets, the expression between the brackets is evaluated to get the property name. Whereas value.x fetches the property of value named “x”, value[x] tries to evaluate the expression x and uses the result as the property name.
+   Methods
+      Properties that contain functions are generally called methods of the value they belong to. As in, “toUpperCase is a method of a string”.
+      array.pop
+      array.push
+      array.join
+   Objects
+      Values of the type object are arbitrary collections of properties between {} and elements are devided by "," the elements consists of name and value with ":" in between them.
+   Mutability
+      object1 == object2 is true only if those are accessing the same value precisely, not if both of them accesses the same amount of value but different instances.
+   The lycanthrope’s log
+      google it
+   Computing correlation
+2018-01-25 20:13:05 This one is getting messy for me around:
+
+function hasEvent(event, entry) {
+  return entry.events.indexOf(event) != -1;
+}
+
+
+what does the events mean in line:
+  return entry.events.indexOf(event) != -1;
+
+Is this a property, a method, a what?
+2018-01-25 20:15:35  ah okay, this is just one of the elements of the objet (is this the right term / phrase "element of an object" ?)
+
