@@ -1,0 +1,28 @@
+newtab:8 SW registered
+var map = {};
+undefined
+function storePhi(event, phi) {
+    map[event] = phi;
+}
+undefined
+map
+{}__proto__: Object
+storePhi("pizza", 0.069);
+undefined
+map
+{pizza: 0.069}pizza: 0.069__proto__: Object
+storePhi("touched tree", -0.081);
+undefined
+map
+{pizza: 0.069, touched tree: -0.081}pizza: 0.069touched tree: -0.081__proto__: Object
+console.log("pizza" in map);
+VM487:1 true
+undefined
+console.log(map["touched tree"]);
+VM529:1 -0.081
+undefined
+for (var event in map)
+    console.log("The correlation for '" + event + "' is " + map[event]);
+VM607:2 The correlation for 'pizza' is 0.069
+VM607:2 The correlation for 'touched tree' is -0.081
+undefined
