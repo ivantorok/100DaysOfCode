@@ -1,0 +1,645 @@
+newtab:8 SW registered
+function gatherCorrelations(journal) {
+  var phis = {};
+  for (var entry = 0; entry < journal.length; entry++) {
+    var events = journal[entry].events;
+    for (var i = 0; i < events.length; i++) {
+      var event = events[i];
+      if (!(event in phis))
+        phis[event] = phi(tableFor(event, journal));
+    }
+  }
+  return phis;
+}
+
+var correlations = gatherCorrelations(JOURNAL);
+console.log(correlations.pizza);
+// → 0.068599434
+VM509:14 Uncaught ReferenceError: JOURNAL is not defined
+    at <anonymous>:14:39
+(anonymous) @ VM509:14
+http://eloquentjavascript.net/code/jacques_journal.js
+;
+undefined
+function gatherCorrelations(journal) {
+  var phis = {};
+  for (var entry = 0; entry < journal.length; entry++) {
+    var events = journal[entry].events;
+    for (var i = 0; i < events.length; i++) {
+      var event = events[i];
+      if (!(event in phis))
+        phis[event] = phi(tableFor(event, journal));
+    }
+  }
+  return phis;
+}
+
+var correlations = gatherCorrelations(JOURNAL);
+console.log(correlations.pizza);
+// → 0.068599434
+VM513:14 Uncaught ReferenceError: JOURNAL is not defined
+    at <anonymous>:14:39
+(anonymous) @ VM513:14
+var JOURNAL = [
+  {"events":["carrot","exercise","weekend"],"squirrel":false},
+  {"events":["bread","pudding","brushed teeth","weekend","touched tree"],"squirrel":false},
+  {"events":["carrot","nachos","brushed teeth","cycling","weekend"],"squirrel":false},
+  {"events":["brussel sprouts","ice cream","brushed teeth","computer","weekend"],"squirrel":false},
+  {"events":["potatoes","candy","brushed teeth","exercise","weekend","dentist"],"squirrel":false},
+  {"events":["brussel sprouts","pudding","brushed teeth","running","weekend"],"squirrel":false},
+  {"events":["pizza","brushed teeth","computer","work","touched tree"],"squirrel":false},
+  {"events":["bread","beer","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["cauliflower","brushed teeth","work"],"squirrel":false},
+  {"events":["pizza","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["lasagna","nachos","brushed teeth","work"],"squirrel":false},
+  {"events":["brushed teeth","weekend","touched tree"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","television","weekend"],"squirrel":false},
+  {"events":["spaghetti","brushed teeth","work"],"squirrel":false},
+  {"events":["brushed teeth","computer","work"],"squirrel":false},
+  {"events":["lettuce","nachos","brushed teeth","work"],"squirrel":false},
+  {"events":["carrot","brushed teeth","running","work"],"squirrel":false},
+  {"events":["brushed teeth","work"],"squirrel":false},
+  {"events":["cauliflower","reading","weekend"],"squirrel":false},
+  {"events":["bread","brushed teeth","weekend"],"squirrel":false},
+  {"events":["lasagna","brushed teeth","exercise","work"],"squirrel":false},
+  {"events":["spaghetti","brushed teeth","reading","work"],"squirrel":false},
+  {"events":["carrot","ice cream","brushed teeth","television","work"],"squirrel":false},
+  {"events":["spaghetti","nachos","work"],"squirrel":false},
+  {"events":["cauliflower","ice cream","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["spaghetti","peanuts","computer","weekend"],"squirrel":true},
+  {"events":["potatoes","ice cream","brushed teeth","computer","weekend"],"squirrel":false},
+  {"events":["potatoes","ice cream","brushed teeth","work"],"squirrel":false},
+  {"events":["peanuts","brushed teeth","running","work"],"squirrel":false},
+  {"events":["potatoes","exercise","work"],"squirrel":false},
+  {"events":["pizza","ice cream","computer","work"],"squirrel":false},
+  {"events":["lasagna","ice cream","work"],"squirrel":false},
+  {"events":["cauliflower","candy","reading","weekend"],"squirrel":false},
+  {"events":["lasagna","nachos","brushed teeth","running","weekend"],"squirrel":false},
+  {"events":["potatoes","brushed teeth","work"],"squirrel":false},
+  {"events":["carrot","work"],"squirrel":false},
+  {"events":["pizza","beer","work","dentist"],"squirrel":false},
+  {"events":["lasagna","pudding","cycling","work"],"squirrel":false},
+  {"events":["spaghetti","brushed teeth","reading","work"],"squirrel":false},
+  {"events":["spaghetti","pudding","television","weekend"],"squirrel":false},
+  {"events":["bread","brushed teeth","exercise","weekend"],"squirrel":false},
+  {"events":["lasagna","peanuts","work"],"squirrel":true},
+  {"events":["pizza","work"],"squirrel":false},
+  {"events":["potatoes","exercise","work"],"squirrel":false},
+  {"events":["brushed teeth","exercise","work"],"squirrel":false},
+  {"events":["spaghetti","brushed teeth","television","work"],"squirrel":false},
+  {"events":["pizza","cycling","weekend"],"squirrel":false},
+  {"events":["carrot","brushed teeth","weekend"],"squirrel":false},
+  {"events":["carrot","beer","brushed teeth","work"],"squirrel":false},
+  {"events":["pizza","peanuts","candy","work"],"squirrel":true},
+  {"events":["carrot","peanuts","brushed teeth","reading","work"],"squirrel":false},
+  {"events":["potatoes","peanuts","brushed teeth","work"],"squirrel":false},
+  {"events":["carrot","nachos","brushed teeth","exercise","work"],"squirrel":false},
+  {"events":["pizza","peanuts","brushed teeth","television","weekend"],"squirrel":false},
+  {"events":["lasagna","brushed teeth","cycling","weekend"],"squirrel":false},
+  {"events":["cauliflower","peanuts","brushed teeth","computer","work","touched tree"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","television","work"],"squirrel":false},
+  {"events":["potatoes","brushed teeth","computer","work"],"squirrel":false},
+  {"events":["bread","candy","work"],"squirrel":false},
+  {"events":["potatoes","nachos","work"],"squirrel":false},
+  {"events":["carrot","pudding","brushed teeth","weekend"],"squirrel":false},
+  {"events":["carrot","brushed teeth","exercise","weekend","touched tree"],"squirrel":false},
+  {"events":["brussel sprouts","running","work"],"squirrel":false},
+  {"events":["brushed teeth","work"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","running","work"],"squirrel":false},
+  {"events":["candy","brushed teeth","work"],"squirrel":false},
+  {"events":["brussel sprouts","brushed teeth","computer","work"],"squirrel":false},
+  {"events":["bread","brushed teeth","weekend"],"squirrel":false},
+  {"events":["cauliflower","brushed teeth","weekend"],"squirrel":false},
+  {"events":["spaghetti","candy","television","work","touched tree"],"squirrel":false},
+  {"events":["carrot","pudding","brushed teeth","work"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","work"],"squirrel":false},
+  {"events":["carrot","ice cream","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["pizza","brushed teeth","work"],"squirrel":false},
+  {"events":["spaghetti","peanuts","exercise","weekend"],"squirrel":true},
+  {"events":["bread","beer","computer","weekend","touched tree"],"squirrel":false},
+  {"events":["brushed teeth","running","work"],"squirrel":false},
+  {"events":["lettuce","peanuts","brushed teeth","work","touched tree"],"squirrel":false},
+  {"events":["lasagna","brushed teeth","television","work"],"squirrel":false},
+  {"events":["cauliflower","brushed teeth","running","work"],"squirrel":false},
+  {"events":["carrot","brushed teeth","running","work"],"squirrel":false},
+  {"events":["carrot","reading","weekend"],"squirrel":false},
+  {"events":["carrot","peanuts","reading","weekend"],"squirrel":true},
+  {"events":["potatoes","brushed teeth","running","work"],"squirrel":false},
+  {"events":["lasagna","ice cream","work","touched tree"],"squirrel":false},
+  {"events":["cauliflower","peanuts","brushed teeth","cycling","work"],"squirrel":false},
+  {"events":["pizza","brushed teeth","running","work"],"squirrel":false},
+  {"events":["lettuce","brushed teeth","work"],"squirrel":false},
+  {"events":["bread","brushed teeth","television","weekend"],"squirrel":false},
+  {"events":["cauliflower","peanuts","brushed teeth","weekend"],"squirrel":false}
+];
+
+// This makes sure the data is exported in node.js —
+// `require('./path/to/04_data.js')` will get you the array.
+if (typeof module != "undefined" && module.exports)
+  module.exports = JOURNAL;
+undefined
+function gatherCorrelations(journal) {
+  var phis = {};
+  for (var entry = 0; entry < journal.length; entry++) {
+    var events = journal[entry].events;
+    for (var i = 0; i < events.length; i++) {
+      var event = events[i];
+      if (!(event in phis))
+        phis[event] = phi(tableFor(event, journal));
+    }
+  }
+  return phis;
+}
+
+var correlations = gatherCorrelations(JOURNAL);
+console.log(correlations.pizza);
+// → 0.068599434
+VM685:8 Uncaught ReferenceError: phi is not defined
+    at gatherCorrelations (<anonymous>:8:14)
+    at <anonymous>:14:20
+gatherCorrelations @ VM685:8
+(anonymous) @ VM685:14
+function gatherCorrelations(journal) {
+  var phis = {};
+  for (var entry = 0; entry < journal.length; entry++) {
+    var events = journal[entry].events;
+    for (var i = 0; i < events.length; i++) {
+      var event = events[i];
+      if (!(event in phis))
+        phis[event] = phi(tableFor(event, journal));
+    }
+  }
+  return phis;
+}
+
+var correlations = gatherCorrelations(JOURNAL);
+console.log(correlations.pizza);
+// → 0.068599434
+VM687:8 Uncaught ReferenceError: phi is not defined
+    at gatherCorrelations (<anonymous>:8:14)
+    at <anonymous>:14:20
+gatherCorrelations @ VM687:8
+(anonymous) @ VM687:14
+function phi(table) {
+  return (table[3] * table[0] - table[2] * table[1]) /
+    Math.sqrt((table[2] + table[3]) *
+              (table[0] + table[1]) *
+              (table[1] + table[3]) *
+              (table[0] + table[2]));
+}
+
+console.log(phi([76, 9, 4, 1]));
+// → 0.068599434
+VM689:9 0.06859943405700354
+undefined
+function gatherCorrelations(journal) {
+  var phis = {};
+  for (var entry = 0; entry < journal.length; entry++) {
+    var events = journal[entry].events;
+    for (var i = 0; i < events.length; i++) {
+      var event = events[i];
+      if (!(event in phis))
+        phis[event] = phi(tableFor(event, journal));
+    }
+  }
+  return phis;
+}
+
+var correlations = gatherCorrelations(JOURNAL);
+console.log(correlations.pizza);
+// → 0.068599434
+VM690:8 Uncaught ReferenceError: tableFor is not defined
+    at gatherCorrelations (<anonymous>:8:14)
+    at <anonymous>:14:20
+gatherCorrelations @ VM690:8
+(anonymous) @ VM690:14
+function hasEvent(event, entry) {
+  return entry.events.indexOf(event) != -1;
+}
+
+function tableFor(event, journal) {
+  var table = [0, 0, 0, 0];
+  for (var i = 0; i < journal.length; i++) {
+    var entry = journal[i], index = 0;
+    if (hasEvent(event, entry)) index += 1;
+    if (entry.squirrel) index += 2;
+    table[index] += 1;
+  }
+  return table;
+}
+
+console.log(tableFor("pizza", JOURNAL));
+// → [76, 9, 4, 1]
+VM692:16 (4) [76, 9, 4, 1]
+undefined
+function gatherCorrelations(journal) {
+  var phis = {};
+  for (var entry = 0; entry < journal.length; entry++) {
+    var events = journal[entry].events;
+    for (var i = 0; i < events.length; i++) {
+      var event = events[i];
+      if (!(event in phis))
+        phis[event] = phi(tableFor(event, journal));
+    }
+  }
+  return phis;
+}
+
+var correlations = gatherCorrelations(JOURNAL);
+console.log(correlations.pizza);
+// → 0.068599434
+VM693:15 0.06859943405700354
+undefined
+function hasEvent(event, entry) {
+  return entry.events.indexOf(event) != -1;
+}
+
+function tableFor(event, journal) {
+  var table = [0, 0, 0, 0];
+  for (var i = 0; i < journal.length; i++) {
+    var entry = journal[i], index = 0;
+    if (hasEvent(event, entry)) index += 1;
+    if (entry.squirrel) index += 2;
+    table[index] += 1;
+  }
+  return table;
+}
+
+console.log(tableFor("pizza", JOURNAL));
+// → [76, 9, 4, 1]
+VM694:16 (4) [76, 9, 4, 1]
+undefined
+function gatherCorrelations(journal) {
+  var phis = {};
+  for (var entry = 0; entry < journal.length; entry++) {
+    var events = journal[entry].events;
+    for (var i = 0; i < events.length; i++) {
+      var event = events[i];
+      if (!(event in phis))
+        phis[event] = phi(tableFor(event, journal));
+    }
+  }
+  return phis;
+}
+
+var correlations = gatherCorrelations(JOURNAL);
+console.log(correlations.pizza);
+// → 0.068599434
+VM696:15 0.06859943405700354
+undefined
+for (var event in correlations)
+  console.log(event + ": " + correlations[event]);
+// → carrot:   0.0140970969
+// → exercise: 0.0685994341
+// → weekend:  0.1371988681
+// → bread:   -0.0757554019
+// → pudding: -0.0648203724
+// and so on...
+VM698:2 carrot: 0.014097096860865023
+VM698:2 exercise: 0.06859943405700354
+VM698:2 weekend: 0.13719886811400708
+VM698:2 bread: -0.07575540190785703
+VM698:2 pudding: -0.06482037235521644
+VM698:2 brushed teeth: -0.3805211953235953
+VM698:2 touched tree: -0.08084520834544433
+VM698:2 nachos: -0.07043451251197408
+VM698:2 cycling: -0.08084520834544433
+VM698:2 brussel sprouts: -0.05230657809659414
+VM698:2 ice cream: -0.08084520834544433
+VM698:2 computer: 0.06859943405700354
+VM698:2 potatoes: -0.08574929257125442
+VM698:2 candy: 0.12964074471043288
+VM698:2 dentist: -0.036563621206356534
+VM698:2 running: -0.09050203323329065
+VM698:2 pizza: 0.06859943405700354
+VM698:2 work: -0.13719886811400708
+VM698:2 beer: -0.05230657809659414
+VM698:2 cauliflower: -0.08084520834544433
+VM698:2 lasagna: 0.08084520834544433
+VM698:2 lettuce: -0.07043451251197408
+VM698:2 television: -0.08084520834544433
+VM698:2 spaghetti: 0.242535625036333
+VM698:2 reading: 0.11068280537595927
+VM698:2 peanuts: 0.59026798116852
+undefined
+for (var event in correlations) {
+    var correlation = correlations[event];
+    if (correlation > 0.1 || correlation < -0.1)
+        console.log(event + ": " + correlation);
+}
+VM892:4 weekend: 0.13719886811400708
+VM892:4 brushed teeth: -0.3805211953235953
+VM892:4 candy: 0.12964074471043288
+VM892:4 work: -0.13719886811400708
+VM892:4 spaghetti: 0.242535625036333
+VM892:4 reading: 0.11068280537595927
+VM892:4 peanuts: 0.59026798116852
+undefined
+for (car i = 0; i < JOURNAL.length; i++) {
+VM955:1 Uncaught SyntaxError: Unexpected identifier
+for (car i = 0; i < JOURNAL.length; i++) {
+VM969:1 Uncaught SyntaxError: Unexpected identifier
+for (var i = 0; i < JOURNAL.length; i++) {
+    var entry = JOURNAL[i];
+    if (hasEvent("peanuts", entry) && !hasEvent("brushed teeth", entry))
+        entry.events.push("peanut teeth");
+}
+undefined
+console.log(phi(tableFor("peanut teeth",JOURNAL)));
+VM1134:1 1
+undefined
+console.log([1,2,3,2,1].indexOf(2));
+VM1164:1 1
+undefined
+console.log([1,2,3,2,1].lastIndexOf(2));
+VM1171:1 3
+undefined
+console.log([1,2,3,2,1].slice(2,4));
+VM1188:1 (2) [3, 2]0: 31: 2length: 2__proto__: Array(0)
+undefined
+console.log([1,2,3,2,1].slice(2));
+VM1189:1 (3) [3, 2, 1]0: 31: 22: 1length: 3__proto__: Array(0)
+undefined
+function remove(array, index) {
+    return array.slice(0.index).concat(array.slice(index +1));
+VM1287:2 Uncaught SyntaxError: Invalid or unexpected token
+function remove(array, index) {
+    return array.slice(0.index)
+.concat(array.slice(index +1 ));
+VM1289:2 Uncaught SyntaxError: Invalid or unexpected token
+function remove(array, index) {
+    return array.slice(0.index).concat(array.slice(index +1 ));
+VM1291:2 Uncaught SyntaxError: Invalid or unexpected token
+function remove(array, index) {
+    return array.slice(0.index).concat(array.slice(index +1 ));
+}
+VM1295:2 Uncaught SyntaxError: Invalid or unexpected token
+function remove(array, index) {
+  return array.slice(0, index)
+    .conc
+ at(array.slice(index + 1));
+}
+console.log(remove(["a", "b", "c", "d", "e"], 2));
+// → ["a", "b", "d", "e"]
+VM1297:6 undefined
+undefined
+function remove(array, index) {
+  return array.slice(0, index)
+    .concat(array.slice(index + 1));
+}
+console.log(remove(["a", "b", "c", "d", "e"], 2));
+// → ["a", "b", "d", "e"]
+VM1302:5 (4) ["a", "b", "d", "e"]0: "a"1: "b"2: "d"3: "e"length: 4__proto__: Array(0)
+undefined
+var myString = "Fido";
+undefined
+myString.myProperty = "value";
+"value"
+console.log(myString.myProperty);
+VM1388:1 undefined
+undefined
+console.log("coconuts".slice(4, 7));
+VM1416:1 nut
+undefined
+console.log("coconuts".indexOf("u"));
+VM1440:1 5
+undefined
+console.log("one two three".indexOf("ee"));
+VM1474:1 11
+undefined
+console.log("    okay   \n".trim();
+VM1502:1 Uncaught SyntaxError: missing ) after argument list
+console.log("    okay   \n".trim());
+VM1505:1 okay
+undefined
+console.log("    okay   \n");
+VM1511:1     okay   
+
+undefined
+var string = "abc";
+undefined
+console.log(string.length);
+VM1551:1 3
+undefined
+console.log(string.charAt(0));
+VM1587:1 a
+undefined
+console.log(string[1]);
+VM1637:1 b
+undefined
+console.log(string[0]);
+VM1642:1 a
+undefined
+console.log(string.charAt(1));
+VM1643:1 b
+undefined
+function noArguments() {};
+undefined
+noArguments(1,2,3);
+undefined
+function threeArguments(a,b,c) {};
+undefined
+threeArguments();
+undefined
+function argumentCounter() {
+    console.log("You gave me ", arguments.length, "arguments.");
+}
+undefined
+argumentCounter("Straw man","Tautology","Ad hominem");
+VM1765:2 You gave me  3 arguments.
+undefined
+function argumentCounter() {
+    console.log("You gave me", arguments.length, "arguments.");
+}
+undefined
+argumentCounter("Straw man","Tautology","Ad hominem");
+VM1774:2 You gave me 3 arguments.
+undefined
+function addEntry(squirrel) {
+    var entry = {events: [], squirrel: squirrel};
+    for (var i = 1; i < arguments.length; i++)
+        entry.events.push(arguments[i]);
+    journal.push(entry);
+}
+undefined
+addEntry(true, "work", "touched tree", "pizza", "running", "television");
+VM2010:5 Uncaught ReferenceError: journal is not defined
+    at addEntry (<anonymous>:5:5)
+    at <anonymous>:1:1
+addEntry @ VM2010:5
+(anonymous) @ VM2032:1
+var journal = {};
+undefined
+addEntry(true, "work", "touched tree", "pizza", "running", "television");
+VM2010:5 Uncaught TypeError: journal.push is not a function
+    at addEntry (<anonymous>:5:13)
+    at <anonymous>:1:1
+addEntry @ VM2010:5
+(anonymous) @ VM2044:1
+function addEntry(squirrel) {
+    var entry = {events: [], squirrel: squirrel};
+    for (var i = 1; i < arguments.length; i++)
+        entry.events.push(arguments[i]);
+    journal.push(entry);
+}
+undefined
+addEntry(true, "work", "touched tree", "pizza", "running", "television");
+VM2045:5 Uncaught TypeError: journal.push is not a function
+    at addEntry (<anonymous>:5:13)
+    at <anonymous>:1:1
+addEntry @ VM2045:5
+(anonymous) @ VM2047:1
+function addEntry(squirrel) {
+  var entry = {events: [], squirrel: squirrel};
+  for (var i = 1; i < arguments.length; i++)
+    entry.events.push(arguments[i]);
+  journal.push(entry);
+}
+addEntry(true, "work", "touched tree", "pizza",
+         "running", "television");
+VM2049:5 Uncaught TypeError: journal.push is not a function
+    at addEntry (<anonymous>:5:11)
+    at <anonymous>:7:1
+addEntry @ VM2049:5
+(anonymous) @ VM2049:7
+var journal = [];
+undefined
+function addEntry(squirrel) {
+  var entry = {events: [], squirrel: squirrel};
+  for (var i = 1; i < arguments.length; i++)
+    entry.events.push(arguments[i]);
+  journal.push(entry);
+}
+addEntry(true, "work", "touched tree", "pizza",
+         "running", "television");
+undefined
+addEntry(true, "work", "touched tree", "pizza", "running", "television");
+undefined
+journal
+(2) [{…}, {…}]0: events: (5) ["work", "touched tree", "pizza", "running", "television"]squirrel: true__proto__: Object1: events: (5) ["work", "touched tree", "pizza", "running", "television"]squirrel: true__proto__: Objectlength: 2__proto__: Array(0)concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()arguments: (...)caller: (...)length: 2name: "copyWithin"__proto__: ƒ ()[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0]entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}__proto__: constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+addEntry(true, "work", "touched tree", "pizza", "running", "television");
+undefined
+function randomPointOnCircle(radius) {
+    var angle = Math.random() * 2 * Math.PI;
+    return {x: radius * Math.cos(angle),
+            y: radius * Math.sin(angle)};
+}
+undefined
+console.log(randomPointOnCircle(2));
+VM2281:1 {x: 0.3824492764474326, y: -1.9630925986679373}
+undefined
+console.log(randomPointOnCircle(2));
+VM2283:1 {x: -1.9534244119549482, y: 0.4291072905212225}
+undefined
+console.log(randomPointOnCircle(2));
+VM2285:1 {x: 0.051244326399728576, y: 1.9993433969710752}
+undefined
+console.log(randomPointOnCircle(2));
+VM2287:1 {x: 0.4148345074203072, y: 1.9565051319772588}
+undefined
+console.log(Math.random());
+VM2323:1 0.5509857594413434
+undefined
+console.log(Math.random());
+VM2325:1 0.42716751440903056
+undefined
+console.log(Math.random());
+VM2327:1 0.003915414138304207
+undefined
+console.log(Math.random());
+VM2329:1 0.8562623611709339
+undefined
+console.log(Math.random());
+VM2331:1 0.9396742178464121
+undefined
+console.log(Math.random());
+VM2333:1 0.09753282044194234
+undefined
+console.log(Math.random());
+VM2335:1 0.9343360395456222
+undefined
+console.log(Math.random());
+VM2337:1 0.7874884810459657
+undefined
+console.log(Math.random());
+VM2339:1 0.7155550853403618
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2391:1 1
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2393:1 0
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2395:1 6
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2397:1 2
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2399:1 4
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2401:1 4
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2403:1 6
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2405:1 3
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2407:1 3
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2409:1 4
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2411:1 4
+undefined
+console.log(Math.floor(Math.random() * 10));
+VM2413:1 9
+undefined
+console.log(Math.floor(Math.random() * 100));
+VM2414:1 5
+undefined
+console.log(Math.floor(Math.random() * 100));
+VM2416:1 16
+undefined
+console.log(Math.floor(Math.random() * 100));
+VM2418:1 62
+undefined
+console.log(Math.floor(Math.random() * 100));
+VM2420:1 19
+undefined
+console.log(Math.floor(Math.random() * 100));
+VM2422:1 3
+undefined
+console.log(Math.floor(Math.random() * 100));
+VM2424:1 16
+undefined
+console.log(Math.floor(Math.random() * 100));
+VM2426:1 93
+undefined
+var myVar = 10;
+undefined
+console.log("myVar" in window);
+VM2468:1 true
+undefined
+console.log(window.myVar);
+VM2533:1 10
+undefined
+function range(start, end) {
+    var rangeArray = [];
+    for (i = start; start <= end; i++)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+range(1,10);
+function range(start, end) {
+    var rangeArray = [];
+    for (i = start; i <= end; i++)
+        rangeArray.push(i);
+    return rangeArray;
+}

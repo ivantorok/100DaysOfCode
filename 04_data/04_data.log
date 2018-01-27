@@ -173,3 +173,139 @@ I gotta stop now, but I think it made more sense now, that I have a fixed goal w
 So long for today.
 
 2018-01-26 22:33:08
+2018-01-27 21:00:34
+Okay, this is an other interesting piece of code:
+
+for (var i = 0; i < JOURNAL.length; i++) {
+   var entry = JOURNAL[i];
+   if (hasEvent("peanuts", entry) && !hasEvent("brushed teeth", entry))
+      entry.events.push("peanut teeth");
+}
+
+
+// and one more time with comments:
+
+for (var i = 0; i < JOURNAL.length; i++) { //looping through all the JOURNAL properties.
+  var entry = JOURNAL[i]; // loading one of the events into the entry variable
+  if (hasEvent("peanuts", entry) && //if the entry has peanuts AND
+     !hasEvent("brushed teeth", entry)) // does not have brushed teeth
+    entry.events.push("peanut teeth"); //then a new "peanut teeth" item is added to the events array.
+}
+console.log(phi(tableFor("peanut teeth", JOURNAL)));
+// → 1
+
+   Further arrayology
+
+push, pop
+unshift, shift
+indexOf, lastIndexOf
+slice
+concat
+
+   Strings and their properties
+
+length
+toUpperCase
+slice
+indexOf
+trim
+charAt
+
+   The arguments object
+   The Math object
+cos, sin, tan, acos, asin, atan, Math.PI
+random, floor, ceil
+   The global object
+The global scope, the space in which global variables live, can also be approached as an object in JavaScript. Each global variable is present as a property of this object. In browsers, the global scope object is stored in the window variable.
+
+var myVar = 10;
+console.log("myVar" in window);
+// → true
+console.log(window.myVar);
+// → 10
+
+   Summary
+Objects and arrays (which are a specific kind of object) provide ways to group several values into a single value. Conceptually, this allows us to put a bunch of related things in a bag and run around with the bag, instead of trying to wrap our arms around all of the individual things and trying to hold on to them separately.
+
+Most values in JavaScript have properties, the exceptions being null and undefined. Properties are accessed using value.propName or value["propName"]. Objects tend to use names for their properties and store more or less a fixed set of them. Arrays, on the other hand, usually contain varying numbers of conceptually identical values and use numbers (starting from 0) as the names of their properties.
+
+There are some named properties in arrays, such as length and a number of methods. Methods are functions that live in properties and (usually) act on the value they are a property of.
+
+Objects can also serve as maps, associating values with names. The in operator can be used to find out whether an object contains a property with a given name. The same keyword can also be used in a for loop (for (var name in object)) to loop over an object’s properties.
+
+   Exercises
+
+
+The sum of a range
+The introduction of this book alluded to the following as a nice way to compute the sum of a range of numbers:
+
+console.log(sum(range(1, 10)));
+Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.
+
+//my solution
+
+function range(start, end) {
+    var rangeArray = [];
+    for (i = start; i <= end; i++)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+console.log(range(1,10));
+VM139:1 (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+undefined
+
+
+
+
+Next, write a sum function that takes an array of numbers and returns the sum of these numbers. Run the previous program and see whether it does indeed return 55.
+
+//my solution:
+function sum(array) {
+    var sumOfArray = 0;
+	for (i = 0 ; i < array.length ; i++) {
+        sumOfArray += array[i];
+    }
+    return sumOfArray;
+}
+undefined
+console.log(sum(range(1, 10)));
+VM292:1 55
+undefined
+
+
+
+As a bonus assignment, modify your range function to take an optional third argument that indicates the “step” value used to build up the array. If no step is given, the array elements go up by increments of one, corresponding to the old behavior. The function call range(1, 10, 2) should return [1, 3, 5, 7, 9]. Make sure it also works with negative step values so that range(5, 2, -1) produces [5, 4, 3, 2].
+
+//my solution
+
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length == 3)
+		stepVariable = step;
+    var rangeArray = [];
+    if (stepVariable > 0) {
+    	for (i = start; i <= end; i += stepVariable)
+        rangeArray.push(i);
+    } else {
+    	for (i = start; i >= end; i += stepVariable)
+        rangeArray.push(i);
+    }
+    return rangeArray;
+}
+undefined
+console.log(range(1,10));
+VM508:1 (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+undefined
+console.log(range(1,10,2));
+VM510:1 (5) [1, 3, 5, 7, 9]
+undefined
+console.log(range(5,2,-1));
+VM512:1 (4) [5, 4, 3, 2]
+undefined
+console.log(sum(range(1, 10)));
+VM543:1 55
+undefined
+
+   Reversing an array
+2018-01-27 22:11:23 I need to stop here for the day. It was good. I am not sure what I learned. Maybe this: = is passing value == is comparing values.

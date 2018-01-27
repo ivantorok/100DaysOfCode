@@ -1,0 +1,166 @@
+function range(start, end) {
+    var rangeArray = [];
+    for (i = start; i <= end; i++)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+console.log(range(1,10));
+VM139:1 (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+undefined
+sum();
+VM151:1 Uncaught ReferenceError: sum is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM151:1
+function sum(array) {
+    var sumOfArray = 0;
+	for (i = 0 ; i < array.length ; i++) {
+        sumOfArray += array[i];
+    }
+    return sumOfArray;
+}
+undefined
+console.log(sum(range(1, 10)));
+VM292:1 55
+undefined
+function range(start, end, step) {
+    var rangeArray = [];
+    for (i = start; i <= end; i += step)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+console.log(range(1,10));
+VM322:1 [1]0: 1length: 1__proto__: Array(0)
+undefined
+function range(start, end, step) {
+    var rangeArray = [];
+    for (i = start; i <= end; i += step)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+function range(start, end, step) {
+	var stepVariable = 1;
+    var rangeArray = [];
+    for (i = start; i <= end; i += step)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length = 3)
+    var rangeArray = [];
+    for (i = start; i <= end; i += step)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length = 3)
+		stepVariable = step;
+    var rangeArray = [];
+    for (i = start; i <= end; i += stepVariable)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+console.log(range(1,10));
+VM429:1 [1]0: 1length: 1__proto__: Array(0)
+undefined
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length == 3)
+		stepVariable = step;
+    var rangeArray = [];
+    for (i = start; i <= end; i += stepVariable)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+console.log(range(1,10));
+VM433:1 (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+undefined
+console.log(range(1,10,2));
+VM434:1 (5) [1, 3, 5, 7, 9]
+undefined
+console.log(range(5,2,-1));
+VM436:1 []length: 0__proto__: Array(0)
+undefined
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length == 3)
+		stepVariable = step;
+    var rangeArray = [];
+    for (i = start; i <= end; i += stepVariable)
+        rangeArray.push(i);
+    return rangeArray;
+}
+undefined
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length == 3)
+		stepVariable = step;
+    var rangeArray = [];
+    if (step > 0) {
+    	for (i = start; i <= end; i += stepVariable)
+    } else {
+    	for (i = start; i >= end; i += stepVariable)
+    }
+        rangeArray.push(i);
+    return rangeArray;
+}
+VM480:8 Uncaught SyntaxError: Unexpected token }
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length == 3)
+		stepVariable = step;
+    var rangeArray = [];
+    if (step > 0) {
+    	for (i = start; i <= end; i += stepVariable)
+        rangeArray.push(i);
+    } else {
+    	for (i = start; i >= end; i += stepVariable)
+        rangeArray.push(i);
+    }
+    return rangeArray;
+}
+undefined
+console.log(range(5,2,-1));
+VM483:1 (4) [5, 4, 3, 2]
+undefined
+console.log(range(1,10,2));
+VM486:1 (5) [1, 3, 5, 7, 9]
+undefined
+console.log(range(1,10));
+VM488:1 []length: 0__proto__: Array(0)
+undefined
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length == 3)
+		stepVariable = step;
+    var rangeArray = [];
+    if (stepVariable > 0) {
+    	for (i = start; i <= end; i += stepVariable)
+        rangeArray.push(i);
+    } else {
+    	for (i = start; i >= end; i += stepVariable)
+        rangeArray.push(i);
+    }
+    return rangeArray;
+}
+undefined
+console.log(range(1,10));
+VM508:1 (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+undefined
+console.log(range(1,10,2));
+VM510:1 (5) [1, 3, 5, 7, 9]
+undefined
+console.log(range(5,2,-1));
+VM512:1 (4) [5, 4, 3, 2]
+undefined
+console.log(sum(range(1, 10)));
+VM543:1 55
+undefined
