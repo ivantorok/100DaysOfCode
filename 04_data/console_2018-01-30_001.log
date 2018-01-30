@@ -1,0 +1,750 @@
+newtab:8 SW registered
+thumb/ Failed to load resource: net::ERR_FAILED
+function reverseArray(array) {
+    var resultArray = [];
+    for (i = 0 ;i < array.length; i++) {
+        resultArray[i] = array[array.length - i];
+    }
+    return resultArray;
+}
+undefined
+console.log(reverseArray(["A", "B", "C"]))
+VM635:1 (3) [undefined, "C", "B"]0: undefined1: "C"2: "B"length: 3__proto__: Array(0)
+undefined
+function reverseArray(array) {
+    var resultArray = [];
+    for (i = 0 ;i < array.length; i++) {
+        resultArray[i] = array[array.length - 1 - i];
+    }
+    return resultArray;
+}
+undefined
+console.log(reverseArray(["A", "B", "C"]))
+VM638:1 (3) ["C", "B", "A"]0: "C"1: "B"2: "A"length: 3__proto__: Array(0)
+undefined
+function reverseArrayInPlace(array) {
+    var tempArray = reverseArray(array);
+    array = tempArray;
+    return 0
+}
+undefined
+var arrayValue = [1,2,3,4,5];
+undefined
+reverseArrayInPlace(arrayValue);
+0
+console.log(arrayValue);
+VM783:1 (5) [1, 2, 3, 4, 5]0: 11: 22: 33: 44: 5length: 5__proto__: Array(0)
+undefined
+function reverseArrayInPlace(array) {
+    arrayValue = reverseArray(array);
+    return 0
+}
+undefined
+console.log(arrayValue);
+VM821:1 (5) [1, 2, 3, 4, 5]0: 11: 22: 33: 44: 5length: 5__proto__: Array(0)
+undefined
+console.log(arrayValue);
+VM823:1 (5) [1, 2, 3, 4, 5]0: 11: 22: 33: 44: 5length: 5__proto__: Array(0)
+undefined
+reverseArrayInPlace(arrayValue);
+0
+console.log(arrayValue);
+VM827:1 (5) [5, 4, 3, 2, 1]0: 51: 42: 33: 24: 1length: 5__proto__: Array(0)
+undefined
+function reverseArrayUnshift(array) {
+    var tempArray = [];
+    for (i = 0 ; i < array.length; i++) {
+        tempArray[i] = array.unshift();
+    }
+    return tempArray;
+}
+undefined
+console.log(reverseArrayUnshift(["A", "B", "C", "D", "E"]));
+VM1051:1 (5) [5, 5, 5, 5, 5]0: 51: 52: 53: 54: 5length: 5__proto__: Array(0)
+undefined
+function reverseArrayUnshift(array) {
+    var tempArray = [];
+    for (i = 0 ; i < array.length; i++) {
+        tempArray.unshift(array[i]);
+    }
+    return tempArray;
+}
+undefined
+console.log(reverseArrayUnshift(["A", "B", "C", "D", "E"]));
+VM1076:1 (5) ["E", "D", "C", "B", "A"]0: "E"1: "D"2: "C"3: "B"4: "A"length: 5__proto__: Array(0)
+undefined
+function reverseArrayInPlaceSwap(array) {
+    var tempValue;
+    for (i = 0; i < Math.floor(array.length / 2; i++){
+VM1271:3 Uncaught SyntaxError: missing ) after argument list
+function reverseArrayInPlaceSwap(array) {
+    var tempValue;
+    for (i = 0; i < Math.floor(array.length / 2); i++){
+        tempValue = array[array.length - 1 - i];
+        array[array.length - 1 - i] = array[i];
+        array[i] = tempValue;
+    }
+}
+undefined
+arrayValue
+(5) [5, 4, 3, 2, 1]0: 11: 22: 33: 44: 5length: 5__proto__: Array(0)
+reverseArrayInPlaceSwap(arrayValue);
+undefined
+arrayValue
+(5) [1, 2, 3, 4, 5]0: 11: 22: 33: 44: 5length: 5__proto__: Array(0)
+arrayValue.push(6);
+6
+arrayValue
+(6) [1, 2, 3, 4, 5, 6]0: 61: 52: 43: 34: 25: 1length: 6__proto__: Array(0)
+reverseArrayInPlaceSwap(arrayValue);
+undefined
+arrayValue
+(6) [6, 5, 4, 3, 2, 1]0: 61: 52: 43: 34: 25: 1length: 6__proto__: Array(0)
+var list {
+VM1466:1 Uncaught SyntaxError: Unexpected token {
+var list = {
+    value: 1,
+    rest: {
+        value: 2,
+        rest {
+VM1507:5 Uncaught SyntaxError: Unexpected token {
+var list = {
+    value: 1,
+    rest: {
+        value: 2,
+        rest: {
+            value: 3,
+            rest: null
+        }
+    }
+};
+undefined
+list
+{value: 1, rest: {…}}rest: rest: rest: nullvalue: 3__proto__: Objectvalue: 2__proto__: Objectvalue: 1__proto__: Object
+function arrayToList(arrayInput) {
+    if (array.length == 0)var listResult = {};
+    var counter = arrayInput.length;
+    
+VM1613:3 Uncaught SyntaxError: Unexpected end of input
+function arrayToList(arrayInput) {
+    if (arrayInput.length == 0)
+var listResult = {};
+    var counter = arrayInput.length;
+    
+VM1624:4 Uncaught SyntaxError: Unexpected end of input
+function arrayToList(arrayInput) {    if (arrayInput.length == 0)
+var listResult = {};
+    var counter = arrayInput.length;
+    
+VM1625:3 Uncaught SyntaxError: Unexpected end of input
+function arrayToList(arrayInput) {
+	if (arrayInput.length == 0)
+        return null;
+    return { value: arrayInput.pop(), rest: arrayToList(arrayInput);
+VM1759:4 Uncaught SyntaxError: Unexpected token ;
+function arrayToList(arrayInput) {
+	if (arrayInput.length == 0)
+        return null;
+    return { value: arrayInput.pop(), rest: arrayToList(arrayInput)};
+VM1762:4 Uncaught SyntaxError: Unexpected end of input
+function arrayToList(arrayInput) {
+	if (arrayInput.length == 0)
+        return null;
+    return { value: arrayInput.pop(), rest: arrayToList(arrayInput)};
+}
+undefined
+console.log(arrayToList([10, 20]));
+VM1801:1 {value: 20, rest: {…}}rest: {value: 10, rest: null}value: 20__proto__: Object
+undefined
+function arrayToList(arrayInput) {
+	if (arrayInput.length == 0)
+        return null;
+    return { value: arrayInput.unshift(), rest: arrayToList(arrayInput)};
+}
+undefined
+console.log(arrayToList([10, 20]));
+VM1812:1 Uncaught RangeError: Maximum call stack size exceeded
+    at arrayToList (<anonymous>:1:21)
+    at arrayToList (<anonymous>:4:49)
+    at arrayToList (<anonymous>:4:49)
+    at arrayToList (<anonymous>:4:49)
+    at arrayToList (<anonymous>:4:49)
+    at arrayToList (<anonymous>:4:49)
+    at arrayToList (<anonymous>:4:49)
+    at arrayToList (<anonymous>:4:49)
+    at arrayToList (<anonymous>:4:49)
+    at arrayToList (<anonymous>:4:49)
+arrayToList @ VM1812:1
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+arrayToList @ VM1812:4
+function arrayToList(arrayInput) {
+	if (arrayInput.length == 0)
+        return null;
+    return { value: arrayInput.shift(), rest: arrayToList(arrayInput)};
+}
+undefined
+console.log(arrayToList([10, 20]));
+VM1819:1 {value: 10, rest: {…}}rest: {value: 20, rest: null}value: 10__proto__: Object
+undefined
+function listToArray(listInput) {
+    return [listInput.value, listToArray(listInput.rest)];
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM2075:2 Uncaught TypeError: Cannot read property 'value' of null
+    at listToArray (<anonymous>:2:23)
+    at listToArray (<anonymous>:2:30)
+    at listToArray (<anonymous>:2:30)
+    at listToArray (<anonymous>:2:30)
+    at <anonymous>:1:13
+listToArray @ VM2075:2
+listToArray @ VM2075:2
+listToArray @ VM2075:2
+listToArray @ VM2075:2
+(anonymous) @ VM2120:1
+function listToArray(listInput) {
+    return [listInput.value, listToArray(listInput.rest)];
+}
+undefined
+function listToArray(listInput) {
+	var arrayResult = [];
+    return [listInput.value, listToArray(listInput.rest)];
+}
+undefined
+function listToArray(listInput) {
+}
+undefined
+function listToArray(listInput) {
+    if (listInput.value == null) {
+		return [].push(listInput.value)
+    }
+    listToArray(listInput.rest);
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM2396:2 Uncaught TypeError: Cannot read property 'value' of null
+    at listToArray (<anonymous>:2:19)
+    at listToArray (<anonymous>:5:5)
+    at listToArray (<anonymous>:5:5)
+    at listToArray (<anonymous>:5:5)
+    at <anonymous>:1:13
+listToArray @ VM2396:2
+listToArray @ VM2396:5
+listToArray @ VM2396:5
+listToArray @ VM2396:5
+(anonymous) @ VM2398:1
+function listToArray(listInput) {
+    if (listInput.rest == null) {
+		return [].push(listInput.value)
+    }
+    listToArray(listInput.rest);
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM2410:1 undefined
+undefined
+function listToArray(listInput) {
+    if (listInput.rest != null) {
+		listToArray(listInput.rest);
+    }
+    return array.shift(listInput.value);
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM2478:5 Uncaught ReferenceError: array is not defined
+    at listToArray (<anonymous>:5:5)
+    at listToArray (<anonymous>:3:3)
+    at listToArray (<anonymous>:3:3)
+    at <anonymous>:1:13
+listToArray @ VM2478:5
+listToArray @ VM2478:3
+listToArray @ VM2478:3
+(anonymous) @ VM2480:1
+function listToArray(listInput) {
+    if (listInput.rest != null) {
+		listToArray(listInput.rest);
+    }
+    return [listInput.value];
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM2507:1 [10]0: 10length: 1__proto__: Array(0)
+undefined
+function listToArray(listInput) {
+    if (listInput.rest != null) {
+		listToArray(listInput.rest);
+    }
+    return [].shift(listInput.value);
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM2532:1 undefined
+undefined
+function listToArray(listInput) {
+   	if (listInput.rest != null) 
+		listToArray(listInput.rest);
+	return [listInput.value,drillDownInList(listInput.rest)];
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM2770:4 Uncaught ReferenceError: drillDownInList is not defined
+    at listToArray (<anonymous>:4:20)
+    at listToArray (<anonymous>:3:3)
+    at listToArray (<anonymous>:3:3)
+    at <anonymous>:1:13
+listToArray @ VM2770:4
+listToArray @ VM2770:3
+listToArray @ VM2770:3
+(anonymous) @ VM2772:1
+function listToArray(listInput) {
+    var tempArray = [];
+    function drillDownInList(listInput) {
+        if (listInput.rest == null)
+            tempArray.unshift(listInput.value);
+			return 0;
+    }
+    drillDownInList(listInput);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3264:1 []length: 0__proto__: Array(0)concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}__proto__: Object
+undefined
+function listToArray(listInput) {
+    var tempArray = [];
+    function drillDownInList(listInput) {
+        if (listInput.rest == null)
+            tempArray.push(listInput.value);
+		drillDownInList(listInput.rest);
+    }
+    drillDownInList(listInput);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3350:4 Uncaught TypeError: Cannot read property 'rest' of null
+    at drillDownInList (<anonymous>:4:23)
+    at drillDownInList (<anonymous>:6:3)
+    at drillDownInList (<anonymous>:6:3)
+    at drillDownInList (<anonymous>:6:3)
+    at listToArray (<anonymous>:8:5)
+    at <anonymous>:1:13
+drillDownInList @ VM3350:4
+drillDownInList @ VM3350:6
+drillDownInList @ VM3350:6
+drillDownInList @ VM3350:6
+listToArray @ VM3350:8
+(anonymous) @ VM3352:1
+function listToArray(listInput) {
+    var tempArray = [];
+	console.log("This is the tempArray at the beginning: " + tempArray);
+    function drillDownInList(listInput) {
+		console.log(listInput);
+        if (listInput.rest == null)
+            tempArray.push(listInput.value);
+		drillDownInList(listInput.rest);
+    }
+    drillDownInList(listInput);
+	console.log("This is the tempArray at the end: " + tempArray);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3445:3 This is the tempArray at the beginning: 
+VM3445:5 {value: 10, rest: {…}}rest: {value: 20, rest: {…}}value: 10__proto__: Object
+VM3445:5 {value: 20, rest: {…}}rest: {value: 30, rest: null}value: 20__proto__: Object
+VM3445:5 {value: 30, rest: null}rest: nullvalue: 30__proto__: Object
+VM3445:5 null
+VM3445:6 Uncaught TypeError: Cannot read property 'rest' of null
+    at drillDownInList (<anonymous>:6:23)
+    at drillDownInList (<anonymous>:8:3)
+    at drillDownInList (<anonymous>:8:3)
+    at drillDownInList (<anonymous>:8:3)
+    at listToArray (<anonymous>:10:5)
+    at <anonymous>:1:13
+drillDownInList @ VM3445:6
+drillDownInList @ VM3445:8
+drillDownInList @ VM3445:8
+drillDownInList @ VM3445:8
+listToArray @ VM3445:10
+(anonymous) @ VM3447:1
+function listToArray(listInput) {
+    var tempArray = [];
+	console.log("This is the tempArray at the beginning: " + tempArray);
+    function drillDownInList(listInput) {
+		console.log(listInput);
+        if (listInput.rest == null)
+            tempArray.push(listInput.value); return;
+		drillDownInList(listInput.rest);
+    }
+    drillDownInList(listInput);
+	console.log("This is the tempArray at the end: " + tempArray);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3460:3 This is the tempArray at the beginning: 
+VM3460:5 {value: 10, rest: {…}}rest: rest: rest: nullvalue: 30__proto__: constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()value: 20__proto__: constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()value: 10__proto__: Object
+VM3460:11 This is the tempArray at the end: 
+VM3462:1 []length: 0__proto__: Array(0)concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}__proto__: Object
+undefined
+function listToArray(listInput) {
+    var tempArray = [];
+	console.log("This is the tempArray at the beginning: " + tempArray);
+    function drillDownInList(listInput) {
+		console.log(listInput);
+        if (listInput.rest == null) {
+            tempArray.push(listInput.value); return;
+        } else {
+			drillDownInList(listInput.rest);
+        }
+    }
+    drillDownInList(listInput);
+	console.log("This is the tempArray at the end: " + tempArray);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3475:3 This is the tempArray at the beginning: 
+VM3475:5 {value: 10, rest: {…}}
+VM3475:5 {value: 20, rest: {…}}
+VM3475:5 {value: 30, rest: null}
+VM3475:13 This is the tempArray at the end: 30
+VM3477:1 [30]0: 30length: 1__proto__: Array(0)
+undefined
+function listToArray(listInput) {
+    var tempArray = [];
+	console.log("This is the tempArray at the beginning: " + tempArray);
+    function drillDownInList(listInput) {
+		console.log(listInput);
+        if (listInput.rest == null) {
+            tempArray.push(listInput.value);
+			console.log("This is the tempArray somewhere in the middle: " + tempArray);
+			return;
+        } else {
+			drillDownInList(listInput.rest);
+        }
+    }
+    drillDownInList(listInput);
+	console.log("This is the tempArray at the end: " + tempArray);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3518:3 This is the tempArray at the beginning: 
+VM3518:5 {value: 10, rest: {…}}
+VM3518:5 {value: 20, rest: {…}}
+VM3518:5 {value: 30, rest: null}
+VM3518:8 This is the tempArray somewhere in the middle: 30
+VM3518:15 This is the tempArray at the end: 30
+VM3520:1 [30]
+undefined
+function listToArray(listInput) {
+    var tempArray = [];
+	console.log("This is the tempArray at the beginning: " + tempArray);
+    function drillDownInList(listInput) {
+		console.log(listInput);
+        if (listInput.rest == null) {
+			return;
+        } else {
+            tempArray.push(listInput.value);
+			console.log("This is the tempArray somewhere in the middle: " + tempArray);
+			drillDownInList(listInput.rest);
+        }
+    }
+    drillDownInList(listInput);
+	console.log("This is the tempArray at the end: " + tempArray);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3521:3 This is the tempArray at the beginning: 
+VM3521:5 {value: 10, rest: {…}}
+VM3521:10 This is the tempArray somewhere in the middle: 10
+VM3521:5 {value: 20, rest: {…}}
+VM3521:10 This is the tempArray somewhere in the middle: 10,20
+VM3521:5 {value: 30, rest: null}
+VM3521:15 This is the tempArray at the end: 10,20
+VM3523:1 (2) [10, 20]0: 101: 20length: 2__proto__: Array(0)
+undefined
+function listToArray(listInput) {
+    var tempArray = [];
+	console.log("This is the tempArray at the beginning: " + tempArray);
+    function drillDownInList(listInput) {
+		console.log(listInput);
+        tempArray.push(listInput.value);
+		console.log("This is the tempArray somewhere in the middle: " + tempArray);
+        if (listInput.rest == null) {
+			return;
+        } else {
+			drillDownInList(listInput.rest);
+        }
+    }
+    drillDownInList(listInput);
+	console.log("This is the tempArray at the end: " + tempArray);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3524:3 This is the tempArray at the beginning: 
+VM3524:5 {value: 10, rest: {…}}
+VM3524:7 This is the tempArray somewhere in the middle: 10
+VM3524:5 {value: 20, rest: {…}}
+VM3524:7 This is the tempArray somewhere in the middle: 10,20
+VM3524:5 {value: 30, rest: null}
+VM3524:7 This is the tempArray somewhere in the middle: 10,20,30
+VM3524:15 This is the tempArray at the end: 10,20,30
+VM3526:1 (3) [10, 20, 30]0: 101: 202: 30length: 3__proto__: Array(0)
+undefined
+function listToArray(listInput) {
+    var tempArray = [];
+	//console.log("This is the tempArray at the beginning: " + tempArray);
+    function drillDownInList(listInput) {
+		//console.log(listInput);
+        tempArray.push(listInput.value);
+		//console.log("This is the tempArray somewhere in the middle: " + tempArray);
+        if (listInput.rest == null) {
+			return;
+        } else {
+			drillDownInList(listInput.rest);
+        }
+    }
+    drillDownInList(listInput);
+	//console.log("This is the tempArray at the end: " + tempArray);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3529:1 (3) [10, 20, 30]0: 101: 202: 30length: 3__proto__: Array(0)
+undefined
+function prepend(valueToList, restOfTheList) {
+    return {value: valueToList, rest: restOfTheList};
+};
+undefined
+console.log(prepend(10, prepend(20, null)));
+VM4071:1 {value: 10, rest: {…}}
+undefined
+function nth(listInput, position) {
+    if (position == 0)
+        return listInput.value
+    else
+        nth(listInput.rest,position - 1);
+}
+undefined
+console.log(nth(arrayToList([10,20,30]), 1));
+VM4287:1 undefined
+undefined
+function nth(listInput, position) {
+    if (position == 0)
+        return listInput.value
+    else
+        nth(listInput.rest,position - 1);
+}
+undefined
+function nth(listInput, position) {
+    if (position == 0)
+        return listInput.value
+    else
+        return nth(listInput.rest,position - 1);
+}
+undefined
+console.log(nth(arrayToList([10,20,30]), 1));
+VM4327:1 20
+undefined
