@@ -309,3 +309,247 @@ undefined
 
    Reversing an array
 2018-01-27 22:11:23 I need to stop here for the day. It was good. I am not sure what I learned. Maybe this: = is passing value == is comparing values.
+
+2018-01-30 18:20:38
+   Reversing an array
+Arrays have a method reverse, which changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument in order to reverse its elements. Neither may use the standard reverse method.
+
+// my code:
+
+function reverseArray(array) {
+    var resultArray = [];
+    for (i = 0 ;i < array.length; i++) {
+        resultArray[i] = array[array.length - 1 - i];
+    }
+    return resultArray;
+}
+undefined
+console.log(reverseArray(["A", "B", "C"]))
+VM638:1 (3) ["C", "B", "A"]0: "C"1: "B"2: "A"length: 3__proto__: Array(0)
+undefined
+
+function reverseArray(array) {
+    var resultArray = [];
+    for (i = 0 ;i < array.length; i++) {
+        resultArray[i] = array[array.length - 1 - i];
+    }
+    return resultArray;
+}
+undefined
+console.log(reverseArray(["A", "B", "C"]))
+VM638:1 (3) ["C", "B", "A"]0: "C"1: "B"2: "A"length: 3__proto__: Array(0)
+undefined
+
+// the other solutions mentioned in the hints
+
+function reverseArrayUnshift(array) {
+    var tempArray = [];
+    for (i = 0 ; i < array.length; i++) {
+        tempArray.unshift(array[i]);
+    }
+    return tempArray;
+}
+undefined
+console.log(reverseArrayUnshift(["A", "B", "C", "D", "E"]));
+VM1076:1 (5) ["E", "D", "C", "B", "A"]0: "E"1: "D"2: "C"3: "B"4: "A"length: 5__proto__: Array(0)
+undefined
+
+// i am not gonna do the push version though...
+
+//trying the in place with swap instead
+
+function reverseArrayInPlaceSwap(array) {
+    var tempValue;
+    for (i = 0; i < Math.floor(array.length / 2); i++){
+        tempValue = array[array.length - 1 - i];
+        array[array.length - 1 - i] = array[i];
+        array[i] = tempValue;
+    }
+}
+undefined
+arrayValue
+(5) [5, 4, 3, 2, 1]
+0
+:
+1
+1
+:
+2
+2
+:
+3
+3
+:
+4
+4
+:
+5
+length
+:
+5
+__proto__
+:
+Array(0)
+reverseArrayInPlaceSwap(arrayValue);
+undefined
+arrayValue
+(5) [1, 2, 3, 4, 5]
+0
+:
+1
+1
+:
+2
+2
+:
+3
+3
+:
+4
+4
+:
+5
+length
+:
+5
+__proto__
+:
+Array(0)
+arrayValue.push(6);
+6
+arrayValue
+(6) [1, 2, 3, 4, 5, 6]
+0
+:
+6
+1
+:
+5
+2
+:
+4
+3
+:
+3
+4
+:
+2
+5
+:
+1
+length
+:
+6
+__proto__
+:
+Array(0)
+reverseArrayInPlaceSwap(arrayValue);
+undefined
+arrayValue
+(6) [6, 5, 4, 3, 2, 1]
+0
+:
+6
+1
+:
+5
+2
+:
+4
+3
+:
+3
+4
+:
+2
+5
+:
+1
+length
+:
+6
+__proto__
+:
+Array(0)
+
+// this one I like a lot....
+
+   A list
+
+Objects, as generic blobs of values, can be used to build all sorts of data structures. A common data structure is the list (not to be confused with the array). A list is a nested set of objects, with the first object holding a reference to the second, the second to the third, and so on.
+
+
+// my code here
+
+function arrayToList(arrayInput) {
+	if (arrayInput.length == 0)
+        return null;
+    return { value: arrayInput.shift(), rest: arrayToList(arrayInput)};
+}
+undefined
+console.log(arrayToList([10, 20]));
+VM1819:1 
+{value: 10, rest: {…}}
+rest
+:
+{value: 20, rest: null}
+value
+:
+10
+__proto__
+:
+Object
+
+
+// my code here:
+
+function listToArray(listInput) {
+    var tempArray = [];
+	//console.log("This is the tempArray at the beginning: " + tempArray);
+    function drillDownInList(listInput) {
+		//console.log(listInput);
+        tempArray.push(listInput.value);
+		//console.log("This is the tempArray somewhere in the middle: " + tempArray);
+        if (listInput.rest == null) {
+			return;
+        } else {
+			drillDownInList(listInput.rest);
+        }
+    }
+    drillDownInList(listInput);
+	//console.log("This is the tempArray at the end: " + tempArray);
+    return tempArray;
+}
+undefined
+console.log(listToArray(arrayToList([10,20,30])));
+VM3529:1 (3) [10, 20, 30]0: 101: 202: 30length: 3__proto__: Array(0)
+undefined
+
+// I already had to use console.log to debug the code. Without that I was completely lost. “If your sword's too short, add to its length by taking one step forward.”
+
+// my code here
+function nth(listInput, position) {
+    if (position == 0)
+        return listInput.value
+    else
+        return nth(listInput.rest,position - 1);
+}
+undefined
+console.log(nth(arrayToList([10,20,30]), 1));
+VM4327:1 20
+undefined
+
+// that was easier eventually
+
+looking at the hints. I think my solution is more elegant for the first task (or I misunderstood the hint).
+Now this next one amuzes me:
+
+To run over a list (in listToArray and nth), a for loop specification like this can be used:
+
+for (var node = list; node; node = node.rest) {}
+
+Can you see how that works? Every iteration of the loop, node points to the current sublist, and the body can read its value property to get the current element. At the end of an iteration, node moves to the next sublist. When that is null, we have reached the end of the list and the loop is finished.
+
+
+okay... Deep comparison is coming up next, but I have to stop here for today.
+2018-01-30 19:46:33
