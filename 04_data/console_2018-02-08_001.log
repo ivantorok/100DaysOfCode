@@ -1,0 +1,326 @@
+newtab:8 SW registered
+thumb/ Failed to load resource: net::ERR_FAILED
+var obj = {here: {is: "an"}, object: 2};
+undefined
+in obj
+VM1920:1 Uncaught SyntaxError: Unexpected token in
+for (each in obj)
+    console.log(each)
+VM1975:2 here
+VM1975:2 object
+undefined
+finction iteareObject(arg) {
+VM2041:1 Uncaught SyntaxError: Unexpected identifier
+function iterateObject(arg){
+	if(typeof arg = "object" && arg != null) {
+		for(each in arg){
+			return iterateObject(each);
+		}
+	} else {
+		console.log(arg);
+	}
+}
+VM2236:2 Uncaught ReferenceError: Invalid left-hand side in assignment
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			return iterateObject(each);
+		}
+	} else {
+		console.log(arg);
+	}
+}
+undefined
+obj
+{here: {…}, object: 2}
+iterateObject(obj)
+VM2238:7 here
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			return iterateObject(each);
+		}
+	} else {
+		console.log(arg);
+		return;
+	}
+}
+undefined
+iterateObject(obj)
+VM2266:7 here
+undefined
+typeof obj
+"object"
+obj != null
+true
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			return iterateObject(each);
+		}
+	} else {
+		console.log(arg);
+		return;
+	}
+}
+undefined
+iterateObject(obj)
+VM2306:4 here
+VM2306:8 here
+undefined
+for(each in obj){console.log(each)}
+VM2376:1 here
+VM2376:1 object
+undefined
+for(each in obj){console.log(each, typeof each)}
+VM2403:1 here string
+VM2403:1 object string
+undefined
+for(each in obj){console.log(each, typeof obj.each)}
+VM2529:1 here undefined
+VM2529:1 object undefined
+undefined
+for(each in obj){console.log(each, typeof obj(each))}
+VM2534:1 Uncaught TypeError: obj is not a function
+    at <anonymous>:1:43
+(anonymous) @ VM2534:1
+obj.here
+{is: "an"}
+for (each in obj) console.log(each, obj.each);
+VM2644:1 here undefined
+VM2644:1 object undefined
+undefined
+for (each in obj) console.log(each, obj[each]);
+VM2651:1 here {is: "an"}
+VM2651:1 object 2
+undefined
+for (each in obj) console.log(each, typeof obj[each]);
+VM2664:1 here object
+VM2664:1 object number
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(arg[each]);
+			return iterateObject(arg[each]);
+		}
+	} else {
+		console.log(arg);
+		return;
+	}
+}
+undefined
+iterateObject(obj)
+VM2666:4 {is: "an"}
+VM2666:4 an
+VM2666:8 an
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			return iterateObject(arg[each]);
+		}
+	} else {
+		console.log(arg);
+		return;
+	}
+}
+undefined
+iterateObject(obj)
+VM2670:4 here
+VM2670:4 is
+VM2670:8 an
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			return iterateObject(arg[each]);
+		}
+	} else {
+		console.log(arg);
+	}
+}
+undefined
+iterateObject(obj)
+VM2675:4 here
+VM2675:4 is
+VM2675:8 an
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			return iterateObject(arg[each]);
+			console.log(arg[each])
+		}
+	}
+}
+undefined
+iterateObject(obj)
+VM2679:4 here
+VM2679:4 is
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			console.log(arg[each]);
+			return iterateObject(arg[each]);
+			
+		}
+	}
+}
+undefined
+iterateObject(obj)
+VM2683:4 here
+VM2683:5 {is: "an"}
+VM2683:4 is
+VM2683:5 an
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			console.log(arg[each]);
+			//return iterateObject(arg[each]);
+			
+		}
+	}
+}
+undefined
+iterateObject(obj)
+VM2687:4 here
+VM2687:5 {is: "an"}
+VM2687:4 object
+VM2687:5 2
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			console.log(arg[each]);
+			iterateObject(arg[each]);
+		}
+	}
+}
+undefined
+iterateObject(obj)
+VM2690:4 here
+VM2690:5 {is: "an"}
+VM2690:4 is
+VM2690:5 an
+VM2690:4 object
+VM2690:5 2
+undefined
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			iterateObject(arg[each]);
+		}
+	} else {
+}
+VM2707:8 Uncaught SyntaxError: Unexpected end of input
+function iterateObject(arg){
+	if(typeof arg == "object" && arg != null) {
+		for(each in arg){
+			console.log(each);
+			iterateObject(arg[each]);
+		}
+	} else {
+		console.log(arg);
+    }
+}
+undefined
+iterateObject(obj)
+VM2715:4 here
+VM2715:4 is
+VM2715:8 an
+VM2715:4 object
+VM2715:8 2
+undefined
+function iterateObject(arg1, arg2){
+	if(typeof arg1 == "object" && arg1 != null && typeof arg2 == "object" && arg2 != null) {
+		for(each in arg1){
+			console.log(each);
+			iterateObject(arg1[each],arg2[each]);
+		}
+	} else {
+		console.log(arg1,arg2);
+    }
+}
+undefined
+iterateObject(obj,obj)
+VM2719:4 here
+VM2719:4 is
+VM2719:8 an an
+VM2719:4 object
+VM2719:8 2 2
+undefined
+iterateObject(obj,obj, {here: 1, object: 2})
+VM2719:4 here
+VM2719:4 is
+VM2719:8 an an
+VM2719:4 object
+VM2719:8 2 2
+undefined
+iterateObject(obj,{here: 1, object: 2})
+VM2719:4 here
+VM2719:8 {is: "an"} 1
+VM2719:4 object
+VM2719:8 2 2
+undefined
+iterateObject(obj,{heree: 1, object: 2})
+VM2719:4 here
+VM2719:8 {is: "an"} undefined
+VM2719:4 object
+VM2719:8 2 2
+undefined
+function deepEqual(arg1, arg2){
+	if(typeof arg1 == "object" && arg1 != null && typeof arg2 == "object" && arg2 != null) {
+		for(each in arg1){
+			deepEqual(arg1[each],arg2[each]);
+		}
+	} else {
+		return arg1 === arg2;
+    }
+}
+undefined
+console.log(deepEqual(obj, obj));
+VM2743:1 undefined
+undefined
+function deepEqual(arg1, arg2){
+	if(typeof arg1 == "object" && arg1 != null && typeof arg2 == "object" && arg2 != null) {
+		for(each in arg1){
+			return deepEqual(arg1[each],arg2[each]);
+		}
+	} else {
+		return arg1 === arg2;
+    }
+}
+undefined
+console.log(deepEqual(obj, obj));
+VM2758:1 true
+undefined
+console.log(deepEqual(obj, {here: 1, object: 2}));
+VM2760:1 false
+undefined
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+VM2762:1 true
+undefined
+for (each in object) {console.log(each,  object[each])}
+VM2825:1 Uncaught ReferenceError: object is not defined
+    at <anonymous>:1:14
+(anonymous) @ VM2825:1
+for (each in obj) {console.log(each,  object[each])}
+VM2832:1 Uncaught ReferenceError: object is not defined
+    at <anonymous>:1:39
+(anonymous) @ VM2832:1
+for (each in obj) {console.log(each,  obj[each])}
+VM2839:1 here {is: "an"}
+VM2839:1 object 2
+undefined
