@@ -553,3 +553,36 @@ Can you see how that works? Every iteration of the loop, node points to the curr
 
 okay... Deep comparison is coming up next, but I have to stop here for today.
 2018-01-30 19:46:33
+2018-02-08 19:34:07 
+I gave up trying, now I am reading the hints. 
+2018-02-08 20:22:05 this one took way too long time:
+
+function deepEqual(arg1, arg2){
+	if(typeof arg1 == "object" && arg1 != null && typeof arg2 == "object" && arg2 != null) {
+		for(each in arg1){
+			return deepEqual(arg1[each],arg2[each]);
+		}
+	} else {
+		return arg1 === arg2;
+    }
+}
+undefined
+console.log(deepEqual(obj, obj));
+VM2758:1 true
+undefined
+console.log(deepEqual(obj, {here: 1, object: 2}));
+VM2760:1 false
+undefined
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+VM2762:1 true
+undefined
+
+
+The points I was missing were:
+for (x in obj) {} is a valid for loop for objects
+within here x is the name of the property and obj[x] is a valid reference to the value of that property
+I do not need to loop through both objects parallel in order to examin each property, because if the property names do not match (meaning that in the for (x in arg1) loop the arg1[x] is a valid thin but it is not valid for arg2, so arg2[x] is undefined) then the two object are not equal.
+
+well... I am sure I am going to forget this again unless I need it in the near future. Nevertheless, I have beaten my desire to give up the 100daysofcode and carried on once again. (Till the next time I wish to give up ;) )
+Closing here. Good night!
+2018-02-08 20:27:59 
