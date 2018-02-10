@@ -1,0 +1,437 @@
+ui Failed to load resource: net::ERR_BLOCKED_BY_CLIENT
+var total = 0; count = 1;
+1
+wihle (count <= 10) {
+VM256:1 Uncaught SyntaxError: Unexpected token {
+while (count <= 10) {
+    total += count;
+    count += 1;
+}
+11
+console.log(total);
+VM260:1 55
+undefined
+console.log(sum(range(1, 10)));
+VM262:1 Uncaught ReferenceError: sum is not defined
+    at <anonymous>:1:9
+(anonymous) @ VM262:1
+range(1, 10);
+VM264:1 Uncaught ReferenceError: range is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM264:1
+function sum(array) {
+    var sumOfArray = 0;
+	for (i = 0 ; i < array.length ; i++) {
+        sumOfArray += array[i];
+    }
+    return sumOfArray;
+}
+undefined
+function range(start, end, step) {
+	var stepVariable = 1;
+	if (arguments.length == 3)
+		stepVariable = step;
+    var rangeArray = [];
+    if (stepVariable > 0) {
+    	for (i = start; i <= end; i += stepVariable)
+        rangeArray.push(i);
+    } else {
+    	for (i = start; i >= end; i += stepVariable)
+        rangeArray.push(i);
+    }
+    return rangeArray;
+}
+undefined
+console.log(sum(range(1, 10)));
+VM270:1 55
+undefined
+var array = [1,2,3];
+undefined
+for (var i = 0; i < array.length; i++) {
+    var current = array[i];
+    console.log(current);
+}
+VM274:3 1
+VM274:3 2
+VM274:3 3
+undefined
+function logEach(array) {
+    for (var i = 0; i < array.length ; i ++){
+        console.log(array[i]);
+    }
+}
+undefined
+logEach(array);
+VM276:3 1
+VM276:3 2
+VM276:3 3
+undefined
+function forEach(array, action) {
+    for (var i = 0; i < array.length; i++) {
+        action(array[i]);
+    }
+}
+undefined
+forEach(array, console.log);
+VM280:3 1
+VM280:3 2
+VM280:3 3
+undefined
+forEach(array, function consoleLogDouble(console.log(item*2));
+VM284:1 Uncaught SyntaxError: Unexpected token .
+forEach(array, function consoleLogDouble(item) {console.log(item*2)});
+VM286:1 2
+VM286:1 4
+VM286:1 6
+undefined
+var total = 0; count = 1;
+1
+forEach (["Wampeter","Foma","Granfalloon"], console.log);
+VM280:3 Wampeter
+VM280:3 Foma
+VM280:3 Granfalloon
+undefined
+var numbers = [1, 2, 3, 4, 5], sum = 0;
+undefined
+forEach(numbers, function(number) {
+    sum += number;
+});
+undefined
+console.log(sum);
+VM560:1 15
+undefined
+function gatherCorrelations(journal) {
+    var phis = {};
+    for (var entry = 0; entry < journal.length;
+         var events = journal[entry].events;
+VM715:4 Uncaught SyntaxError: Unexpected token var
+function gatherCorrelations(journal) {
+    var phis = {};
+    for (var entry = 0; entry < journal.length;
+         var events = journal[entry].events;
+VM717:4 Uncaught SyntaxError: Unexpected token var
+function gatherCorrelations(journal) {
+    var phis = {};
+    for (var entry = 0; entry < journal.length; entry++) {
+         var events = journal[entry].events;
+        for (var i = 0;i < events.length; i++) {
+            var event = events[i];
+            if (!(event in phis))
+                phis[event] = phi(tableFor(event, journal));
+        }
+    }
+    return phis;
+}
+undefined
+function gatherCorrelations(journal) {
+    var phis = {};
+    journal.forEach(function(entry) {
+        entry.events.forEach(function(event) {
+            if (!(event in phis))
+                phis[event] = phi(tableFor(event, journal));
+        });
+    });
+    return phis;
+}
+undefined
+function greaterThan(n) {
+    return function(m) {return m > n; };
+}
+undefined
+var greaterThan10 = greaterThan(10);
+undefined
+console.log(greaterThan10(11));
+VM1355:1 true
+undefined
+function noisy(f) {
+    return function(arg) {
+        console.log("calling with", arg);
+        var val = f(arg);
+        console.log("called with", arg, "- got", val);
+        return val;
+    };
+}
+undefined
+noisy(Boolean)(0);
+VM1513:3 calling with 0
+VM1513:5 called with 0 - got false
+false
+noisy(console.log)("text");
+VM1513:3 calling with text
+VM1513:4 text
+VM1513:5 called with text - got undefined
+undefined
+noisy(function returningDouble(arg) {return arg*2})("text");
+VM1513:3 calling with text
+VM1513:5 called with text - got NaN
+NaN
+noisy(function returningDouble(arg) {return arg*2})("3");
+VM1513:3 calling with 3
+VM1513:5 called with 3 - got 6
+6
+noisy(function returningDouble(arg) {return arg+arg})("3");
+VM1513:3 calling with 3
+VM1513:5 called with 3 - got 33
+"33"
+noisy(function returningDouble(arg) {return arg+arg})("text");
+VM1513:3 calling with text
+VM1513:5 called with text - got texttext
+"texttext"
+noisy(function returningDouble(arg) {return arg+arg})(5);
+VM1513:3 calling with 5
+VM1513:5 called with 5 - got 10
+10
+function unless(test, then) {
+    if (!test) then();
+}
+undefined
+function repeat(times, body) {
+    for (var i = 0; i < times; i++) body(i);
+}
+undefined
+repeat(3, function(n) {
+    unless(n % 2, function() {
+        console.log(n, "is event");
+    });
+});
+VM1868:3 0 "is event"
+VM1868:3 2 "is event"
+undefined
+repeat(10, function(n) {
+    unless(n % 2, function() {
+        console.log(n, "is event");
+    });
+});
+VM1869:3 0 "is event"
+VM1869:3 2 "is event"
+VM1869:3 4 "is event"
+VM1869:3 6 "is event"
+VM1869:3 8 "is event"
+undefined
+function transparentWrapping(f) {
+    return function() {
+        return f.apply(null, arguments);
+    };
+}
+undefined
+transparentWrapping(console.log)("What is going to happen now?");
+VM1987:3 What is going to happen now?
+undefined
+transparentWrapping(console.log)("What is going to happen now?", "and now", "and then");
+VM1987:3 What is going to happen now? and now and then
+undefined
+transparentWrapping(console.log, typof, Boolean, String)("What is going to happen now?", "and now", "and then");
+VM2097:1 Uncaught ReferenceError: typof is not defined
+    at <anonymous>:1:34
+(anonymous) @ VM2097:1
+transparentWrapping(console.log, typeof, Boolean, String)("What is going to happen now?", "and now", "and then");
+VM2100:1 Uncaught SyntaxError: Unexpected token ,
+transparentWrapping(console.log, Boolean, String)("What is going to happen now?", "and now", "and then");
+VM1987:3 What is going to happen now? and now and then
+undefined
+transparentWrapping(console.log, Boolean, String)(0,1,2,3,"What is going to happen now?", "and now", "and then");
+VM1987:3 0 1 2 3 "What is going to happen now?" "and now" "and then"
+undefined
+transparentWrapping(Boolean, String)(0,1,2,3,"What is going to happen now?", "and now", "and then");
+false
+transparentWrapping(Boolean, String)(0);
+false
+transparentWrapping(Boolean, String)(0,2,1);
+false
+transparentWrapping(String)(0,2,1);
+"0"
+transparentWrapping(f)(0,2,1);
+VM1987:3 Uncaught TypeError: f.apply is not a function
+    at <anonymous>:3:18
+    at <anonymous>:1:23
+(anonymous) @ VM1987:3
+(anonymous) @ VM2167:1
+transparentWrapping(console.log("asdfas"))(0,2,1);
+VM2201:1 asdfas
+VM1987:3 Uncaught TypeError: Cannot read property 'apply' of undefined
+    at <anonymous>:3:18
+    at <anonymous>:1:43
+(anonymous) @ VM1987:3
+(anonymous) @ VM2201:1
+transparentWrapping(console.log("asdfas"),Boolean)(0,2,1);
+VM2216:1 asdfas
+VM1987:3 Uncaught TypeError: Cannot read property 'apply' of undefined
+    at <anonymous>:3:18
+    at <anonymous>:1:51
+(anonymous) @ VM1987:3
+(anonymous) @ VM2216:1
+transparentWrapping(console.log,Boolean)(0,2,1);
+VM1987:3 0 2 1
+undefined
+function transparentWrapping(f) {
+    return function() {
+        return f.apply(Boolean, [0,1,2,1,0,0]);
+    };
+}
+undefined
+transparentWrapping(console.log);
+ƒ () {
+        return f.apply(Boolean, [0,1,2,1,0,0]);
+    }
+transparentWrapping(console.log)(String);
+VM2262:3 0 1 2 1 0 0
+undefined
+transparentWrapping(console.log)(Boolean);
+VM2262:3 0 1 2 1 0 0
+undefined
+transparentWrapping(console.log)(1);
+VM2262:3 0 1 2 1 0 0
+undefined
+transparentWrapping(console.log)(2);
+VM2262:3 0 1 2 1 0 0
+undefined
+function transparentWrapping(f) {
+    return function() {
+        return f.apply("string", [0,1,2,1,0,0]);
+    };
+}
+undefined
+transparentWrapping(console.log);
+ƒ () {
+        return f.apply("string", [0,1,2,1,0,0]);
+    }
+transparentWrapping(console.log)(1);
+VM2352:3 0 1 2 1 0 0
+undefined
+transparentWrapping(console.log)(2);
+VM2352:3 0 1 2 1 0 0
+undefined
+transparentWrapping(Boolean)(2);
+false
+function transparentWrapping(f) {
+    return function() {
+        return f.apply("string", arguments);
+    };
+}
+undefined
+transparentWrapping(Boolean)(2);
+true
+transparentWrapping(Boolean)(0);
+false
+transparentWrapping(Boolean)(0,1,3);
+false
+transparentWrapping(Boolean, console.log)(0);
+false
+function transparentWrapping(f) {
+    return function() {
+        return f.apply(Boolean, arguments);
+    };
+}
+undefined
+transparentWrapping(Boolean, console.log)(0);
+false
+transparentWrapping(Boolean, console.log)(1);
+true
+var string ( JSON.stringify({name: "X", born: 1980});
+VM2490:1 Uncaught SyntaxError: Unexpected token (
+var string  = JSON.stringify({name: "X", born: 1980});
+undefined
+console.log(string);
+VM2547:1 {"name":"X","born":1980}
+undefined
+console.log(JSON.parse(string).born);
+VM2581:1 1980
+undefined
+console.log(JSON.parse(boolean).born);
+VM2606:1 Uncaught ReferenceError: boolean is not defined
+    at <anonymous>:1:24
+(anonymous) @ VM2606:1
+console.log(JSON.parse(Boolean).born);
+VM2610:1 Uncaught SyntaxError: Unexpected token u in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at <anonymous>:1:18
+(anonymous) @ VM2609:1
+console.log(JSON.parse(number).born);
+VM2635:1 Uncaught ReferenceError: number is not defined
+    at <anonymous>:1:24
+(anonymous) @ VM2635:1
+console.log(JSON.parse(num).born);
+VM2642:1 Uncaught ReferenceError: num is not defined
+    at <anonymous>:1:24
+(anonymous) @ VM2642:1
+console.log(JSON.parse(string).born);
+VM2659:1 1980
+undefined
+JSON.parse(string).born;
+1980
+JSON.parse(boolean).born;
+VM2686:1 Uncaught ReferenceError: boolean is not defined
+    at <anonymous>:1:12
+(anonymous) @ VM2686:1
+JSON.parse(Boolean).born;
+VM2690:1 Uncaught SyntaxError: Unexpected token u in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at <anonymous>:1:6
+(anonymous) @ VM2689:1
+JSON.parse().born;
+VM2704:1 Uncaught SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at <anonymous>:1:6
+(anonymous) @ VM2703:1
+JSON.parse(numbers).born;
+VM2720:1 Uncaught SyntaxError: Unexpected token , in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at <anonymous>:1:6
+(anonymous) @ VM2719:1
+JSON.parse(number).born;
+VM2723:1 Uncaught ReferenceError: number is not defined
+    at <anonymous>:1:12
+(anonymous) @ VM2723:1
+JSON.parse(string).born;
+1980
+http://eloquentjavascript.net/code/ancestry.js
+
+;
+undefined
+var ANCESTRY_FILE = JSON.stringify([
+  {"name": "Carolus Haverbeke", "sex": "m", "born": 1832, "died": 1905, "father": "Carel Haverbeke", "mother": "Maria van Brussel"},
+  {"name": "Emma de Milliano", "sex": "f", "born": 1876, "died": 1956, "father": "Petrus de Milliano", "mother": "Sophia van Damme"},
+  {"name": "Maria de Rycke", "sex": "f", "born": 1683, "died": 1724, "father": "Frederik de Rycke", "mother": "Laurentia van Vlaenderen"},
+  {"name": "Jan van Brussel", "sex": "m", "born": 1714, "died": 1748, "father": "Jacobus van Brussel", "mother": "Joanna van Rooten"},
+  {"name": "Philibert Haverbeke", "sex": "m", "born": 1907, "died": 1997, "father": "Emile Haverbeke", "mother": "Emma de Milliano"},
+  {"name": "Jan Frans van Brussel", "sex": "m", "born": 1761, "died": 1833, "father": "Jacobus Bernardus van Brussel", "mother":null},
+  {"name": "Pauwels van Haverbeke", "sex": "m", "born": 1535, "died": 1582, "father": "N. van Haverbeke", "mother":null},
+  {"name": "Clara Aernoudts", "sex": "f", "born": 1918, "died": 2012, "father": "Henry Aernoudts", "mother": "Sidonie Coene"},
+  {"name": "Emile Haverbeke", "sex": "m", "born": 1877, "died": 1968, "father": "Carolus Haverbeke", "mother": "Maria Sturm"},
+  {"name": "Lieven de Causmaecker", "sex": "m", "born": 1696, "died": 1724, "father": "Carel de Causmaecker", "mother": "Joanna Claes"},
+  {"name": "Pieter Haverbeke", "sex": "m", "born": 1602, "died": 1642, "father": "Lieven van Haverbeke", "mother":null},
+  {"name": "Livina Haverbeke", "sex": "f", "born": 1692, "died": 1743, "father": "Daniel Haverbeke", "mother": "Joanna de Pape"},
+  {"name": "Pieter Bernard Haverbeke", "sex": "m", "born": 1695, "died": 1762, "father": "Willem Haverbeke", "mother": "Petronella Wauters"},
+  {"name": "Lieven van Haverbeke", "sex": "m", "born": 1570, "died": 1636, "father": "Pauwels van Haverbeke", "mother": "Lievijne Jans"},
+  {"name": "Joanna de Causmaecker", "sex": "f", "born": 1762, "died": 1807, "father": "Bernardus de Causmaecker", "mother":null},
+  {"name": "Willem Haverbeke", "sex": "m", "born": 1668, "died": 1731, "father": "Lieven Haverbeke", "mother": "Elisabeth Hercke"},
+  {"name": "Pieter Antone Haverbeke", "sex": "m", "born": 1753, "died": 1798, "father": "Jan Francies Haverbeke", "mother": "Petronella de Decker"},
+  {"name": "Maria van Brussel", "sex": "f", "born": 1801, "died": 1834, "father": "Jan Frans van Brussel", "mother": "Joanna de Causmaecker"},
+  {"name": "Angela Haverbeke", "sex": "f", "born": 1728, "died": 1734, "father": "Pieter Bernard Haverbeke", "mother": "Livina de Vrieze"},
+  {"name": "Elisabeth Haverbeke", "sex": "f", "born": 1711, "died": 1754, "father": "Jan Haverbeke", "mother": "Maria de Rycke"},
+  {"name": "Lievijne Jans", "sex": "f", "born": 1542, "died": 1582, "father":null, "mother":null},
+  {"name": "Bernardus de Causmaecker", "sex": "m", "born": 1721, "died": 1789, "father": "Lieven de Causmaecker", "mother": "Livina Haverbeke"},
+  {"name": "Jacoba Lammens", "sex": "f", "born": 1699, "died": 1740, "father": "Lieven Lammens", "mother": "Livina de Vrieze"},
+  {"name": "Pieter de Decker", "sex": "m", "born": 1705, "died": 1780, "father": "Joos de Decker", "mother": "Petronella van de Steene"},
+  {"name": "Joanna de Pape", "sex": "f", "born": 1654, "died": 1723, "father": "Vincent de Pape", "mother": "Petronella Wauters"},
+  {"name": "Daniel Haverbeke", "sex": "m", "born": 1652, "died": 1723, "father": "Lieven Haverbeke", "mother": "Elisabeth Hercke"},
+  {"name": "Lieven Haverbeke", "sex": "m", "born": 1631, "died": 1676, "father": "Pieter Haverbeke", "mother": "Anna van Hecke"},
+  {"name": "Martina de Pape", "sex": "f", "born": 1666, "died": 1727, "father": "Vincent de Pape", "mother": "Petronella Wauters"},
+  {"name": "Jan Francies Haverbeke", "sex": "m", "born": 1725, "died": 1779, "father": "Pieter Bernard Haverbeke", "mother": "Livina de Vrieze"},
+  {"name": "Maria Haverbeke", "sex": "m", "born": 1905, "died": 1997, "father": "Emile Haverbeke", "mother": "Emma de Milliano"},
+  {"name": "Petronella de Decker", "sex": "f", "born": 1731, "died": 1781, "father": "Pieter de Decker", "mother": "Livina Haverbeke"},
+  {"name": "Livina Sierens", "sex": "f", "born": 1761, "died": 1826, "father": "Jan Sierens", "mother": "Maria van Waes"},
+  {"name": "Laurentia Haverbeke", "sex": "f", "born": 1710, "died": 1786, "father": "Jan Haverbeke", "mother": "Maria de Rycke"},
+  {"name": "Carel Haverbeke", "sex": "m", "born": 1796, "died": 1837, "father": "Pieter Antone Haverbeke", "mother": "Livina Sierens"},
+  {"name": "Elisabeth Hercke", "sex": "f", "born": 1632, "died": 1674, "father": "Willem Hercke", "mother": "Margriet de Brabander"},
+  {"name": "Jan Haverbeke", "sex": "m", "born": 1671, "died": 1731, "father": "Lieven Haverbeke", "mother": "Elisabeth Hercke"},
+  {"name": "Anna van Hecke", "sex": "f", "born": 1607, "died": 1670, "father": "Paschasius van Hecke", "mother": "Martijntken Beelaert"},
+  {"name": "Maria Sturm", "sex": "f", "born": 1835, "died": 1917, "father": "Charles Sturm", "mother": "Seraphina Spelier"},
+  {"name": "Jacobus Bernardus van Brussel", "sex": "m", "born": 1736, "died": 1809, "father": "Jan van Brussel", "mother": "Elisabeth Haverbeke"}
+])
+
+// This makes sure the data is exported in node.js —
+// `require("./path/to/ancestry.js")` will get you the array.
+if (typeof module != "undefined" && module.exports)
+  module.exports = ANCESTRY_FILE;
+undefined

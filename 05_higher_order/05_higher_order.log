@@ -1,0 +1,66 @@
+http://eloquentjavascript.net/05_higher_order.html
+2018-02-10 11:33:41
+Abstraction
+It has to become second nature, for a programmer, to notice when a concept is begging to be abstracted into a new word.
+Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions. If you have already accepted the fact that functions are regular values, there is nothing particularly remarkable about the fact that such functions exist. The term comes from mathematics, where the distinction between functions and other values is taken more seriously.
+Higher-order functions allow us to abstract over actions, not just values. They come in several forms. For example, you can have functions that create new functions.
+
+function greaterThan(n) {
+  return function(m) { return m > n; };
+}
+var greaterThan10 = greaterThan(10);
+console.log(greaterThan10(11));
+// → true
+And you can have functions that change other functions.
+
+function noisy(f) {
+  return function(arg) {
+    console.log("calling with", arg);
+    var val = f(arg);
+    console.log("called with", arg, "- got", val);
+    return val;
+  };
+}
+noisy(Boolean)(0);
+// → calling with 0
+// → called with 0 - got false
+You can even write functions that provide new types of control flow.
+
+function unless(test, then) {
+  if (!test) then();
+}
+function repeat(times, body) {
+  for (var i = 0; i < times; i++) body(i);
+}
+
+repeat(3, function(n) {
+  unless(n % 2, function() {
+    console.log(n, "is even");
+  });
+});
+// → 0 is even
+// → 2 is even
+
+
+
+
+
+apply
+
+
+JavaScript functions have an apply method. You pass it an array (or array-like object) of arguments, and it will call the function with those arguments.
+Now... This is beyond me at this point... maybe later it will become more clear:
+
+
+function transparentWrapping(f) {
+  return function() {
+    return f.apply(null, arguments);
+  };
+}
+That’s a useless function, but it shows the pattern we are interested in—the function it returns passes all of the given arguments, and only those arguments, to f. It does this by passing its own arguments object to apply. The first argument to apply, for which we are passing null here, can be used to simulate a method call. We will come back to that in the next chapter.
+
+
+JavaScript gives us functions, JSON.stringify and JSON.parse, that convert data to and from this format. The first takes a JavaScript value and returns a JSON-encoded string. The second takes such a string and converts it to the value it encodes
+2018-02-10 12:29:24
+
+
