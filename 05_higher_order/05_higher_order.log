@@ -81,3 +81,48 @@ It was interesting.
 
 Okay, that was interesting. I am not sure what I have learned. Maybe tomorrow it will distill to something I can express verbally. Or maybe later...
 2018-02-12 16:38:19
+2018-02-16 08:21:51
+For example, the following code finds the percentage of a person’s known ancestors who lived past 70 (by lineage, so people may be counted multiple times):
+
+https://twitter.com/steveluscher/status/741089564329054208
+http://www.globalnerdy.com/2016/06/23/map-filter-and-reduce-explained-using-emoji/
+http://www.globalnerdy.com/wordpress/wp-content/uploads/2016/06/map-filter-reduce-in-emoji-1.png
+
+Binding
+
+
+console.log(ancestry.filter(isInSet.bind(null, theSet)));
+// → … same result
+The call to bind returns a function that will call isInSet with theSet as first argument, followed by any remaining arguments given to the bound function.
+
+The first argument, where the example passes null, is used for method calls, similar to the first argument to apply. I’ll describe this in more detail in the next chapter.
+
+SUMMARY:
+Functions as arguments for other functions enable us to work with incomplete pieces of code, where the missing computation is passed to the function from other parts of the cod e (from a situation where those computations are better defined).
+Arrays: forEach, filter, map, reduce
+Functions: apply, bind
+
+
+Exercises
+Flattening
+Use the reduce method in combination with the concat method to “flatten” an array of arrays into a single array that has all the elements of the input arrays.
+
+var arrays = [[1, 2, 3], [4, 5], [6]];
+// Your code here.
+// → [1, 2, 3, 4, 5, 6]
+
+function flattenArrayDebug(array) {
+	return array.reduce(function (a, b) {
+        return a = a.concat(b);
+    });
+};
+undefined
+flattenArrayDebug(arrays);
+(6) [1, 2, 3, 4, 5, 6]
+console.log(flattenArrayDebug(arrays));
+VM4191:1 (6) [1, 2, 3, 4, 5, 6]0: 11: 22: 33: 44: 55: 6length: 6__proto__: Array(0)
+undefined
+
+2018-02-16 09:30:37 
+For me the takeaway is the same again: read slowly and carefully. It pays off. Gotta stop here.
+2018-02-16 09:31:59
