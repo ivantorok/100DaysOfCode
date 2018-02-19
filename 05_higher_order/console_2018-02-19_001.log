@@ -1,0 +1,343 @@
+newtab:7 SW registered
+var ancestry = JSON.parse(ANCESTRY_FILE);
+VM353:1 Uncaught ReferenceError: ANCESTRY_FILE is not defined
+    at <anonymous>:1:27
+(anonymous) @ VM353:1
+var ANCESTRY_FILE = JSON.stringify([
+  {"name": "Carolus Haverbeke", "sex": "m", "born": 1832, "died": 1905, "father": "Carel Haverbeke", "mother": "Maria van Brussel"},
+  {"name": "Emma de Milliano", "sex": "f", "born": 1876, "died": 1956, "father": "Petrus de Milliano", "mother": "Sophia van Damme"},
+  {"name": "Maria de Rycke", "sex": "f", "born": 1683, "died": 1724, "father": "Frederik de Rycke", "mother": "Laurentia van Vlaenderen"},
+  {"name": "Jan van Brussel", "sex": "m", "born": 1714, "died": 1748, "father": "Jacobus van Brussel", "mother": "Joanna van Rooten"},
+  {"name": "Philibert Haverbeke", "sex": "m", "born": 1907, "died": 1997, "father": "Emile Haverbeke", "mother": "Emma de Milliano"},
+  {"name": "Jan Frans van Brussel", "sex": "m", "born": 1761, "died": 1833, "father": "Jacobus Bernardus van Brussel", "mother":null},
+  {"name": "Pauwels van Haverbeke", "sex": "m", "born": 1535, "died": 1582, "father": "N. van Haverbeke", "mother":null},
+  {"name": "Clara Aernoudts", "sex": "f", "born": 1918, "died": 2012, "father": "Henry Aernoudts", "mother": "Sidonie Coene"},
+  {"name": "Emile Haverbeke", "sex": "m", "born": 1877, "died": 1968, "father": "Carolus Haverbeke", "mother": "Maria Sturm"},
+  {"name": "Lieven de Causmaecker", "sex": "m", "born": 1696, "died": 1724, "father": "Carel de Causmaecker", "mother": "Joanna Claes"},
+  {"name": "Pieter Haverbeke", "sex": "m", "born": 1602, "died": 1642, "father": "Lieven van Haverbeke", "mother":null},
+  {"name": "Livina Haverbeke", "sex": "f", "born": 1692, "died": 1743, "father": "Daniel Haverbeke", "mother": "Joanna de Pape"},
+  {"name": "Pieter Bernard Haverbeke", "sex": "m", "born": 1695, "died": 1762, "father": "Willem Haverbeke", "mother": "Petronella Wauters"},
+  {"name": "Lieven van Haverbeke", "sex": "m", "born": 1570, "died": 1636, "father": "Pauwels van Haverbeke", "mother": "Lievijne Jans"},
+  {"name": "Joanna de Causmaecker", "sex": "f", "born": 1762, "died": 1807, "father": "Bernardus de Causmaecker", "mother":null},
+  {"name": "Willem Haverbeke", "sex": "m", "born": 1668, "died": 1731, "father": "Lieven Haverbeke", "mother": "Elisabeth Hercke"},
+  {"name": "Pieter Antone Haverbeke", "sex": "m", "born": 1753, "died": 1798, "father": "Jan Francies Haverbeke", "mother": "Petronella de Decker"},
+  {"name": "Maria van Brussel", "sex": "f", "born": 1801, "died": 1834, "father": "Jan Frans van Brussel", "mother": "Joanna de Causmaecker"},
+  {"name": "Angela Haverbeke", "sex": "f", "born": 1728, "died": 1734, "father": "Pieter Bernard Haverbeke", "mother": "Livina de Vrieze"},
+  {"name": "Elisabeth Haverbeke", "sex": "f", "born": 1711, "died": 1754, "father": "Jan Haverbeke", "mother": "Maria de Rycke"},
+  {"name": "Lievijne Jans", "sex": "f", "born": 1542, "died": 1582, "father":null, "mother":null},
+  {"name": "Bernardus de Causmaecker", "sex": "m", "born": 1721, "died": 1789, "father": "Lieven de Causmaecker", "mother": "Livina Haverbeke"},
+  {"name": "Jacoba Lammens", "sex": "f", "born": 1699, "died": 1740, "father": "Lieven Lammens", "mother": "Livina de Vrieze"},
+  {"name": "Pieter de Decker", "sex": "m", "born": 1705, "died": 1780, "father": "Joos de Decker", "mother": "Petronella van de Steene"},
+  {"name": "Joanna de Pape", "sex": "f", "born": 1654, "died": 1723, "father": "Vincent de Pape", "mother": "Petronella Wauters"},
+  {"name": "Daniel Haverbeke", "sex": "m", "born": 1652, "died": 1723, "father": "Lieven Haverbeke", "mother": "Elisabeth Hercke"},
+  {"name": "Lieven Haverbeke", "sex": "m", "born": 1631, "died": 1676, "father": "Pieter Haverbeke", "mother": "Anna van Hecke"},
+  {"name": "Martina de Pape", "sex": "f", "born": 1666, "died": 1727, "father": "Vincent de Pape", "mother": "Petronella Wauters"},
+  {"name": "Jan Francies Haverbeke", "sex": "m", "born": 1725, "died": 1779, "father": "Pieter Bernard Haverbeke", "mother": "Livina de Vrieze"},
+  {"name": "Maria Haverbeke", "sex": "m", "born": 1905, "died": 1997, "father": "Emile Haverbeke", "mother": "Emma de Milliano"},
+  {"name": "Petronella de Decker", "sex": "f", "born": 1731, "died": 1781, "father": "Pieter de Decker", "mother": "Livina Haverbeke"},
+  {"name": "Livina Sierens", "sex": "f", "born": 1761, "died": 1826, "father": "Jan Sierens", "mother": "Maria van Waes"},
+  {"name": "Laurentia Haverbeke", "sex": "f", "born": 1710, "died": 1786, "father": "Jan Haverbeke", "mother": "Maria de Rycke"},
+  {"name": "Carel Haverbeke", "sex": "m", "born": 1796, "died": 1837, "father": "Pieter Antone Haverbeke", "mother": "Livina Sierens"},
+  {"name": "Elisabeth Hercke", "sex": "f", "born": 1632, "died": 1674, "father": "Willem Hercke", "mother": "Margriet de Brabander"},
+  {"name": "Jan Haverbeke", "sex": "m", "born": 1671, "died": 1731, "father": "Lieven Haverbeke", "mother": "Elisabeth Hercke"},
+  {"name": "Anna van Hecke", "sex": "f", "born": 1607, "died": 1670, "father": "Paschasius van Hecke", "mother": "Martijntken Beelaert"},
+  {"name": "Maria Sturm", "sex": "f", "born": 1835, "died": 1917, "father": "Charles Sturm", "mother": "Seraphina Spelier"},
+  {"name": "Jacobus Bernardus van Brussel", "sex": "m", "born": 1736, "died": 1809, "father": "Jan van Brussel", "mother": "Elisabeth Haverbeke"}
+])
+
+// This makes sure the data is exported in node.js —
+// `require("./path/to/ancestry.js")` will get you the array.
+if (typeof module != "undefined" && module.exports)
+  module.exports = ANCESTRY_FILE;
+undefined
+var ancestry = JSON.parse(ANCESTRY_FILE);
+undefined
+function average(array) {
+    function plus(a, b) {return a + b; }
+    return array.reduce(plus) / array.length;
+}
+undefined
+var byName = {};
+undefined
+ancestry.forEach(function(person) {
+    byName[person.name] = person;
+});
+undefined
+function ageDifference(person1, person2) {
+    return person1.born - person2.born;
+}
+undefined
+byName
+{Carolus Haverbeke: {…}, Emma de Milliano: {…}, Maria de Rycke: {…}, Jan van Brussel: {…}, Philibert Haverbeke: {…}, …}Angela Haverbeke: born: 1728died: 1734father: "Pieter Bernard Haverbeke"mother: "Livina de Vrieze"name: "Angela Haverbeke"sex: "f"__proto__: ObjectAnna van Hecke: {name: "Anna van Hecke", sex: "f", born: 1607, died: 1670, father: "Paschasius van Hecke", …}Bernardus de Causmaecker: {name: "Bernardus de Causmaecker", sex: "m", born: 1721, died: 1789, father: "Lieven de Causmaecker", …}Carel Haverbeke: {name: "Carel Haverbeke", sex: "m", born: 1796, died: 1837, father: "Pieter Antone Haverbeke", …}Carolus Haverbeke: {name: "Carolus Haverbeke", sex: "m", born: 1832, died: 1905, father: "Carel Haverbeke", …}Clara Aernoudts: {name: "Clara Aernoudts", sex: "f", born: 1918, died: 2012, father: "Henry Aernoudts", …}Daniel Haverbeke: {name: "Daniel Haverbeke", sex: "m", born: 1652, died: 1723, father: "Lieven Haverbeke", …}Elisabeth Haverbeke: {name: "Elisabeth Haverbeke", sex: "f", born: 1711, died: 1754, father: "Jan Haverbeke", …}Elisabeth Hercke: {name: "Elisabeth Hercke", sex: "f", born: 1632, died: 1674, father: "Willem Hercke", …}Emile Haverbeke: {name: "Emile Haverbeke", sex: "m", born: 1877, died: 1968, father: "Carolus Haverbeke", …}Emma de Milliano: {name: "Emma de Milliano", sex: "f", born: 1876, died: 1956, father: "Petrus de Milliano", …}Jacoba Lammens: {name: "Jacoba Lammens", sex: "f", born: 1699, died: 1740, father: "Lieven Lammens", …}Jacobus Bernardus van Brussel: {name: "Jacobus Bernardus van Brussel", sex: "m", born: 1736, died: 1809, father: "Jan van Brussel", …}Jan Francies Haverbeke: {name: "Jan Francies Haverbeke", sex: "m", born: 1725, died: 1779, father: "Pieter Bernard Haverbeke", …}Jan Frans van Brussel: {name: "Jan Frans van Brussel", sex: "m", born: 1761, died: 1833, father: "Jacobus Bernardus van Brussel", …}Jan Haverbeke: {name: "Jan Haverbeke", sex: "m", born: 1671, died: 1731, father: "Lieven Haverbeke", …}Jan van Brussel: {name: "Jan van Brussel", sex: "m", born: 1714, died: 1748, father: "Jacobus van Brussel", …}Joanna de Causmaecker: {name: "Joanna de Causmaecker", sex: "f", born: 1762, died: 1807, father: "Bernardus de Causmaecker", …}Joanna de Pape: {name: "Joanna de Pape", sex: "f", born: 1654, died: 1723, father: "Vincent de Pape", …}Laurentia Haverbeke: {name: "Laurentia Haverbeke", sex: "f", born: 1710, died: 1786, father: "Jan Haverbeke", …}Lieven Haverbeke: {name: "Lieven Haverbeke", sex: "m", born: 1631, died: 1676, father: "Pieter Haverbeke", …}Lieven de Causmaecker: {name: "Lieven de Causmaecker", sex: "m", born: 1696, died: 1724, father: "Carel de Causmaecker", …}Lieven van Haverbeke: {name: "Lieven van Haverbeke", sex: "m", born: 1570, died: 1636, father: "Pauwels van Haverbeke", …}Lievijne Jans: {name: "Lievijne Jans", sex: "f", born: 1542, died: 1582, father: null, …}Livina Haverbeke: {name: "Livina Haverbeke", sex: "f", born: 1692, died: 1743, father: "Daniel Haverbeke", …}Livina Sierens: {name: "Livina Sierens", sex: "f", born: 1761, died: 1826, father: "Jan Sierens", …}Maria Haverbeke: {name: "Maria Haverbeke", sex: "m", born: 1905, died: 1997, father: "Emile Haverbeke", …}Maria Sturm: {name: "Maria Sturm", sex: "f", born: 1835, died: 1917, father: "Charles Sturm", …}Maria de Rycke: {name: "Maria de Rycke", sex: "f", born: 1683, died: 1724, father: "Frederik de Rycke", …}Maria van Brussel: {name: "Maria van Brussel", sex: "f", born: 1801, died: 1834, father: "Jan Frans van Brussel", …}Martina de Pape: {name: "Martina de Pape", sex: "f", born: 1666, died: 1727, father: "Vincent de Pape", …}Pauwels van Haverbeke: {name: "Pauwels van Haverbeke", sex: "m", born: 1535, died: 1582, father: "N. van Haverbeke", …}Petronella de Decker: {name: "Petronella de Decker", sex: "f", born: 1731, died: 1781, father: "Pieter de Decker", …}Philibert Haverbeke: {name: "Philibert Haverbeke", sex: "m", born: 1907, died: 1997, father: "Emile Haverbeke", …}Pieter Antone Haverbeke: {name: "Pieter Antone Haverbeke", sex: "m", born: 1753, died: 1798, father: "Jan Francies Haverbeke", …}Pieter Bernard Haverbeke: {name: "Pieter Bernard Haverbeke", sex: "m", born: 1695, died: 1762, father: "Willem Haverbeke", …}Pieter Haverbeke: {name: "Pieter Haverbeke", sex: "m", born: 1602, died: 1642, father: "Lieven van Haverbeke", …}Pieter de Decker: {name: "Pieter de Decker", sex: "m", born: 1705, died: 1780, father: "Joos de Decker", …}Willem Haverbeke: born: 1668died: 1731father: "Lieven Haverbeke"mother: "Elisabeth Hercke"name: "Willem Haverbeke"sex: "m"__proto__: Object__proto__: Object
+byName[byName["Willem Haverbeke"].mother].born - byName["Willem Haverbeke"].born
+-36
+byName["Willem Haverbeke"].born - byName[byName["Willem Haverbeke"].mother].born
+36
+byName["Willem Haverbeke"].mother
+"Elisabeth Hercke"
+byName[byName["Willem Haverbeke"].mother]
+{name: "Elisabeth Hercke", sex: "f", born: 1632, died: 1674, father: "Willem Hercke", …}
+function mothersAgeAtBirth(person) {
+    return byName[person].born - byName[byName[person].mother].born;
+}
+undefined
+function mothersAgeAtBirth(person) {
+    return ageDifference(byName[person], byName[byName[person].mother]);
+}
+undefined
+mothersAgeAtBirth("Willem Hercke");
+VM1028:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:64)
+    at <anonymous>:1:1
+mothersAgeAtBirth @ VM1028:2
+(anonymous) @ VM1038:1
+function ageDifference(person1, person2) {
+    return byName[person1].born - byName[person2].born;
+}
+undefined
+mothersAgeAtBirth("Willem Hercke");
+VM1028:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:64)
+    at <anonymous>:1:1
+mothersAgeAtBirth @ VM1028:2
+(anonymous) @ VM1075:1
+mothersAgeAtBirth(Willem Hercke);
+VM1096:1 Uncaught SyntaxError: missing ) after argument list
+mothersAgeAtBirth("Willem Haverbeke");
+VM1073:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:28)
+    at mothersAgeAtBirth (<anonymous>:2:12)
+    at <anonymous>:1:1
+ageDifference @ VM1073:2
+mothersAgeAtBirth @ VM1028:2
+(anonymous) @ VM1097:1
+function ageDifference(person1, person2) {
+    return person1.born - person2.born;
+}
+undefined
+mothersAgeAtBirth("Willem Haverbeke");
+36
+ancestry.map(mothersAgeAtBirth);
+VM1028:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:64)
+    at Array.map (<anonymous>)
+    at <anonymous>:1:10
+mothersAgeAtBirth @ VM1028:2
+(anonymous) @ VM1359:1
+ancestry.map(mothersAgeAtBirth());
+VM1028:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:64)
+    at <anonymous>:1:14
+mothersAgeAtBirth @ VM1028:2
+(anonymous) @ VM1362:1
+byName.map(mothersAgeAtBirth());
+VM1028:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:64)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1028:2
+(anonymous) @ VM1389:1
+byName.map(mothersAgeAtBirth);
+VM1392:1 Uncaught TypeError: byName.map is not a function
+    at <anonymous>:1:8
+(anonymous) @ VM1392:1
+byName.map(mothersAgeAtBirth());
+VM1028:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:64)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1028:2
+(anonymous) @ VM1395:1
+function mothersAgeAtBirth(person) {
+    return ageDifference(person, byName[byName[person].mother]);
+}
+undefined
+byName.map(mothersAgeAtBirth());
+VM1439:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:56)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1439:2
+(anonymous) @ VM1441:1
+byName.map(mothersAgeAtBirth);
+VM1444:1 Uncaught TypeError: byName.map is not a function
+    at <anonymous>:1:8
+(anonymous) @ VM1444:1
+byName.map(mothersAgeAtBirth());
+VM1439:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:56)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1439:2
+(anonymous) @ VM1447:1
+mothersAgeAtBirth("Willem Haverbeke");
+NaN
+function mothersAgeAtBirth(person) {
+    return ageDifference(byName[person], byName[byName[person].mother]);
+}
+undefined
+mothersAgeAtBirth("Willem Haverbeke");
+36
+byName
+{Carolus Haverbeke: {…}, Emma de Milliano: {…}, Maria de Rycke: {…}, Jan van Brussel: {…}, Philibert Haverbeke: {…}, …}
+byName.map(mothersAgeAtBirth());
+VM1466:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:64)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1466:2
+(anonymous) @ VM1486:1
+function mothersAgeAtBirth(person) {
+    if (byName[person].mother != null) return ageDifference(byName[person], byName[byName[person].mother]);
+}
+undefined
+byName.map(mothersAgeAtBirth());
+VM1501:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:24)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1501:2
+(anonymous) @ VM1503:1
+function mothersAgeAtBirth(person) {
+    return ageDifference(person, byName[person.mother]);
+}
+undefined
+byName.map(mothersAgeAtBirth());
+VM1583:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:48)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1583:2
+(anonymous) @ VM1585:1
+function mothersAgeAtBirth(person) {
+    return ageDifference(person, person.mother);
+}
+undefined
+byName.map(mothersAgeAtBirth());
+VM1599:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:41)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1599:2
+(anonymous) @ VM1601:1
+function mothersAgeAtBirth(person) {
+    return ageDifference(person, byName[person.mother]);
+}
+undefined
+byName.map(mothersAgeAtBirth());
+VM1615:2 Uncaught TypeError: Cannot read property 'mother' of undefined
+    at mothersAgeAtBirth (<anonymous>:2:48)
+    at <anonymous>:1:12
+mothersAgeAtBirth @ VM1615:2
+(anonymous) @ VM1617:1
+mothersAgeAtBirth(byName["Jan van Brussel"]);
+VM1130:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:35)
+    at mothersAgeAtBirth (<anonymous>:2:12)
+    at <anonymous>:1:1
+ageDifference @ VM1130:2
+mothersAgeAtBirth @ VM1615:2
+(anonymous) @ VM1661:1
+function mothersAgeAtBirth(person) {
+    return ageDifference(byName[person], byName[person.mother]);
+}
+undefined
+mothersAgeAtBirth(byName["Jan van Brussel"]);
+VM1130:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:20)
+    at mothersAgeAtBirth (<anonymous>:2:12)
+    at <anonymous>:1:1
+ageDifference @ VM1130:2
+mothersAgeAtBirth @ VM1674:2
+(anonymous) @ VM1676:1
+function ageDifference(person1, person2) {
+    return byName[person1].born - byNae[person2].born;
+}
+undefined
+mothersAgeAtBirth(byName["Jan van Brussel"]);
+VM1701:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:28)
+    at mothersAgeAtBirth (<anonymous>:2:12)
+    at <anonymous>:1:1
+ageDifference @ VM1701:2
+mothersAgeAtBirth @ VM1674:2
+(anonymous) @ VM1703:1
+function ageDifference(person1, person2) {
+    return byName[person1].born - byName[person2].born;
+}
+undefined
+mothersAgeAtBirth(byName["Jan van Brussel"]);
+VM1706:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:28)
+    at mothersAgeAtBirth (<anonymous>:2:12)
+    at <anonymous>:1:1
+ageDifference @ VM1706:2
+mothersAgeAtBirth @ VM1674:2
+(anonymous) @ VM1708:1
+function ageDifference(person1, person2) {
+    return person1.born - person2.born;
+}
+undefined
+mothersAgeAtBirth(byName["Jan van Brussel"]);
+VM1737:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:20)
+    at mothersAgeAtBirth (<anonymous>:2:12)
+    at <anonymous>:1:1
+ageDifference @ VM1737:2
+mothersAgeAtBirth @ VM1674:2
+(anonymous) @ VM1739:1
+ageDifference(byName["Angela Haverbeke"],byName["Anna van Hecke"])
+121
+ageDifference(byName["Angela Haverbeke"],byName[byName["Anna van Hecke"].mother])
+VM1737:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:35)
+    at <anonymous>:1:1
+ageDifference @ VM1737:2
+(anonymous) @ VM1782:1
+byName["Anna van Hecke"].mother
+"Martijntken Beelaert"
+ageDifference(byName["Angela Haverbeke"],byName["Martijntken Beelaert"])
+VM1737:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:35)
+    at <anonymous>:1:1
+ageDifference @ VM1737:2
+(anonymous) @ VM1837:1
+byName["Martijntken Beelaert"].born
+VM1844:1 Uncaught TypeError: Cannot read property 'born' of undefined
+    at <anonymous>:1:32
+(anonymous) @ VM1844:1
+byName["Martijntken Beelaert"]
+undefined
+var byName = {};
+ancestry.forEach(function(person) {
+  byName[person.name] = person;
+});
+undefined
+byName["Martijntken Beelaert"]
+undefined
+ancestry
+(39) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: born: 1832died: 1905father: "Carel Haverbeke"mother: "Maria van Brussel"name: "Carolus Haverbeke"sex: "m"__proto__: Object1: {name: "Emma de Milliano", sex: "f", born: 1876, died: 1956, father: "Petrus de Milliano", …}2: {name: "Maria de Rycke", sex: "f", born: 1683, died: 1724, father: "Frederik de Rycke", …}3: {name: "Jan van Brussel", sex: "m", born: 1714, died: 1748, father: "Jacobus van Brussel", …}4: {name: "Philibert Haverbeke", sex: "m", born: 1907, died: 1997, father: "Emile Haverbeke", …}5: {name: "Jan Frans van Brussel", sex: "m", born: 1761, died: 1833, father: "Jacobus Bernardus van Brussel", …}6: {name: "Pauwels van Haverbeke", sex: "m", born: 1535, died: 1582, father: "N. van Haverbeke", …}7: {name: "Clara Aernoudts", sex: "f", born: 1918, died: 2012, father: "Henry Aernoudts", …}8: {name: "Emile Haverbeke", sex: "m", born: 1877, died: 1968, father: "Carolus Haverbeke", …}9: {name: "Lieven de Causmaecker", sex: "m", born: 1696, died: 1724, father: "Carel de Causmaecker", …}10: {name: "Pieter Haverbeke", sex: "m", born: 1602, died: 1642, father: "Lieven van Haverbeke", …}11: {name: "Livina Haverbeke", sex: "f", born: 1692, died: 1743, father: "Daniel Haverbeke", …}12: {name: "Pieter Bernard Haverbeke", sex: "m", born: 1695, died: 1762, father: "Willem Haverbeke", …}13: {name: "Lieven van Haverbeke", sex: "m", born: 1570, died: 1636, father: "Pauwels van Haverbeke", …}14: {name: "Joanna de Causmaecker", sex: "f", born: 1762, died: 1807, father: "Bernardus de Causmaecker", …}15: {name: "Willem Haverbeke", sex: "m", born: 1668, died: 1731, father: "Lieven Haverbeke", …}16: {name: "Pieter Antone Haverbeke", sex: "m", born: 1753, died: 1798, father: "Jan Francies Haverbeke", …}17: {name: "Maria van Brussel", sex: "f", born: 1801, died: 1834, father: "Jan Frans van Brussel", …}18: {name: "Angela Haverbeke", sex: "f", born: 1728, died: 1734, father: "Pieter Bernard Haverbeke", …}19: {name: "Elisabeth Haverbeke", sex: "f", born: 1711, died: 1754, father: "Jan Haverbeke", …}20: {name: "Lievijne Jans", sex: "f", born: 1542, died: 1582, father: null, …}21: {name: "Bernardus de Causmaecker", sex: "m", born: 1721, died: 1789, father: "Lieven de Causmaecker", …}22: {name: "Jacoba Lammens", sex: "f", born: 1699, died: 1740, father: "Lieven Lammens", …}23: {name: "Pieter de Decker", sex: "m", born: 1705, died: 1780, father: "Joos de Decker", …}24: {name: "Joanna de Pape", sex: "f", born: 1654, died: 1723, father: "Vincent de Pape", …}25: {name: "Daniel Haverbeke", sex: "m", born: 1652, died: 1723, father: "Lieven Haverbeke", …}26: {name: "Lieven Haverbeke", sex: "m", born: 1631, died: 1676, father: "Pieter Haverbeke", …}27: {name: "Martina de Pape", sex: "f", born: 1666, died: 1727, father: "Vincent de Pape", …}28: {name: "Jan Francies Haverbeke", sex: "m", born: 1725, died: 1779, father: "Pieter Bernard Haverbeke", …}29: {name: "Maria Haverbeke", sex: "m", born: 1905, died: 1997, father: "Emile Haverbeke", …}30: {name: "Petronella de Decker", sex: "f", born: 1731, died: 1781, father: "Pieter de Decker", …}31: {name: "Livina Sierens", sex: "f", born: 1761, died: 1826, father: "Jan Sierens", …}32: {name: "Laurentia Haverbeke", sex: "f", born: 1710, died: 1786, father: "Jan Haverbeke", …}33: {name: "Carel Haverbeke", sex: "m", born: 1796, died: 1837, father: "Pieter Antone Haverbeke", …}34: {name: "Elisabeth Hercke", sex: "f", born: 1632, died: 1674, father: "Willem Hercke", …}35: {name: "Jan Haverbeke", sex: "m", born: 1671, died: 1731, father: "Lieven Haverbeke", …}36: {name: "Anna van Hecke", sex: "f", born: 1607, died: 1670, father: "Paschasius van Hecke", …}37: {name: "Maria Sturm", sex: "f", born: 1835, died: 1917, father: "Charles Sturm", …}38: {name: "Jacobus Bernardus van Brussel", sex: "m", born: 1736, died: 1809, father: "Jan van Brussel", …}length: 39__proto__: Array(0)
+ancestry.forEach(function(person) {
+    byName[person.name] = person;
+});
+undefined
+byName
+{Carolus Haverbeke: {…}, Emma de Milliano: {…}, Maria de Rycke: {…}, Jan van Brussel: {…}, Philibert Haverbeke: {…}, …}Angela Haverbeke: {name: "Angela Haverbeke", sex: "f", born: 1728, died: 1734, father: "Pieter Bernard Haverbeke", …}Anna van Hecke: {name: "Anna van Hecke", sex: "f", born: 1607, died: 1670, father: "Paschasius van Hecke", …}Bernardus de Causmaecker: {name: "Bernardus de Causmaecker", sex: "m", born: 1721, died: 1789, father: "Lieven de Causmaecker", …}Carel Haverbeke: {name: "Carel Haverbeke", sex: "m", born: 1796, died: 1837, father: "Pieter Antone Haverbeke", …}Carolus Haverbeke: {name: "Carolus Haverbeke", sex: "m", born: 1832, died: 1905, father: "Carel Haverbeke", …}Clara Aernoudts: {name: "Clara Aernoudts", sex: "f", born: 1918, died: 2012, father: "Henry Aernoudts", …}Daniel Haverbeke: {name: "Daniel Haverbeke", sex: "m", born: 1652, died: 1723, father: "Lieven Haverbeke", …}Elisabeth Haverbeke: {name: "Elisabeth Haverbeke", sex: "f", born: 1711, died: 1754, father: "Jan Haverbeke", …}Elisabeth Hercke: {name: "Elisabeth Hercke", sex: "f", born: 1632, died: 1674, father: "Willem Hercke", …}Emile Haverbeke: {name: "Emile Haverbeke", sex: "m", born: 1877, died: 1968, father: "Carolus Haverbeke", …}Emma de Milliano: {name: "Emma de Milliano", sex: "f", born: 1876, died: 1956, father: "Petrus de Milliano", …}Jacoba Lammens: {name: "Jacoba Lammens", sex: "f", born: 1699, died: 1740, father: "Lieven Lammens", …}Jacobus Bernardus van Brussel: {name: "Jacobus Bernardus van Brussel", sex: "m", born: 1736, died: 1809, father: "Jan van Brussel", …}Jan Francies Haverbeke: {name: "Jan Francies Haverbeke", sex: "m", born: 1725, died: 1779, father: "Pieter Bernard Haverbeke", …}Jan Frans van Brussel: {name: "Jan Frans van Brussel", sex: "m", born: 1761, died: 1833, father: "Jacobus Bernardus van Brussel", …}Jan Haverbeke: {name: "Jan Haverbeke", sex: "m", born: 1671, died: 1731, father: "Lieven Haverbeke", …}Jan van Brussel: {name: "Jan van Brussel", sex: "m", born: 1714, died: 1748, father: "Jacobus van Brussel", …}Joanna de Causmaecker: {name: "Joanna de Causmaecker", sex: "f", born: 1762, died: 1807, father: "Bernardus de Causmaecker", …}Joanna de Pape: {name: "Joanna de Pape", sex: "f", born: 1654, died: 1723, father: "Vincent de Pape", …}Laurentia Haverbeke: {name: "Laurentia Haverbeke", sex: "f", born: 1710, died: 1786, father: "Jan Haverbeke", …}Lieven Haverbeke: {name: "Lieven Haverbeke", sex: "m", born: 1631, died: 1676, father: "Pieter Haverbeke", …}Lieven de Causmaecker: {name: "Lieven de Causmaecker", sex: "m", born: 1696, died: 1724, father: "Carel de Causmaecker", …}Lieven van Haverbeke: {name: "Lieven van Haverbeke", sex: "m", born: 1570, died: 1636, father: "Pauwels van Haverbeke", …}Lievijne Jans: {name: "Lievijne Jans", sex: "f", born: 1542, died: 1582, father: null, …}Livina Haverbeke: {name: "Livina Haverbeke", sex: "f", born: 1692, died: 1743, father: "Daniel Haverbeke", …}Livina Sierens: {name: "Livina Sierens", sex: "f", born: 1761, died: 1826, father: "Jan Sierens", …}Maria Haverbeke: {name: "Maria Haverbeke", sex: "m", born: 1905, died: 1997, father: "Emile Haverbeke", …}Maria Sturm: {name: "Maria Sturm", sex: "f", born: 1835, died: 1917, father: "Charles Sturm", …}Maria de Rycke: {name: "Maria de Rycke", sex: "f", born: 1683, died: 1724, father: "Frederik de Rycke", …}Maria van Brussel: {name: "Maria van Brussel", sex: "f", born: 1801, died: 1834, father: "Jan Frans van Brussel", …}Martina de Pape: {name: "Martina de Pape", sex: "f", born: 1666, died: 1727, father: "Vincent de Pape", …}Pauwels van Haverbeke: {name: "Pauwels van Haverbeke", sex: "m", born: 1535, died: 1582, father: "N. van Haverbeke", …}Petronella de Decker: {name: "Petronella de Decker", sex: "f", born: 1731, died: 1781, father: "Pieter de Decker", …}Philibert Haverbeke: {name: "Philibert Haverbeke", sex: "m", born: 1907, died: 1997, father: "Emile Haverbeke", …}Pieter Antone Haverbeke: {name: "Pieter Antone Haverbeke", sex: "m", born: 1753, died: 1798, father: "Jan Francies Haverbeke", …}Pieter Bernard Haverbeke: {name: "Pieter Bernard Haverbeke", sex: "m", born: 1695, died: 1762, father: "Willem Haverbeke", …}Pieter Haverbeke: {name: "Pieter Haverbeke", sex: "m", born: 1602, died: 1642, father: "Lieven van Haverbeke", …}Pieter de Decker: {name: "Pieter de Decker", sex: "m", born: 1705, died: 1780, father: "Joos de Decker", …}Willem Haverbeke: {name: "Willem Haverbeke", sex: "m", born: 1668, died: 1731, father: "Lieven Haverbeke", …}__proto__: Object
+ageDifference(byName["Emma de Milliano"],byName[byName["Emma de Milliano"].mother])
+VM1737:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:35)
+    at <anonymous>:1:1
+ageDifference @ VM1737:2
+(anonymous) @ VM1987:1
+byName
+{Carolus Haverbeke: {…}, Emma de Milliano: {…}, Maria de Rycke: {…}, Jan van Brussel: {…}, Philibert Haverbeke: {…}, …}Angela Haverbeke: born: 1728died: 1734father: "Pieter Bernard Haverbeke"mother: "Livina de Vrieze"name: "Angela Haverbeke"sex: "f"__proto__: ObjectAnna van Hecke: {name: "Anna van Hecke", sex: "f", born: 1607, died: 1670, father: "Paschasius van Hecke", …}Bernardus de Causmaecker: {name: "Bernardus de Causmaecker", sex: "m", born: 1721, died: 1789, father: "Lieven de Causmaecker", …}Carel Haverbeke: {name: "Carel Haverbeke", sex: "m", born: 1796, died: 1837, father: "Pieter Antone Haverbeke", …}Carolus Haverbeke: {name: "Carolus Haverbeke", sex: "m", born: 1832, died: 1905, father: "Carel Haverbeke", …}Clara Aernoudts: {name: "Clara Aernoudts", sex: "f", born: 1918, died: 2012, father: "Henry Aernoudts", …}Daniel Haverbeke: {name: "Daniel Haverbeke", sex: "m", born: 1652, died: 1723, father: "Lieven Haverbeke", …}Elisabeth Haverbeke: {name: "Elisabeth Haverbeke", sex: "f", born: 1711, died: 1754, father: "Jan Haverbeke", …}Elisabeth Hercke: {name: "Elisabeth Hercke", sex: "f", born: 1632, died: 1674, father: "Willem Hercke", …}Emile Haverbeke: {name: "Emile Haverbeke", sex: "m", born: 1877, died: 1968, father: "Carolus Haverbeke", …}Emma de Milliano: {name: "Emma de Milliano", sex: "f", born: 1876, died: 1956, father: "Petrus de Milliano", …}Jacoba Lammens: {name: "Jacoba Lammens", sex: "f", born: 1699, died: 1740, father: "Lieven Lammens", …}Jacobus Bernardus van Brussel: {name: "Jacobus Bernardus van Brussel", sex: "m", born: 1736, died: 1809, father: "Jan van Brussel", …}Jan Francies Haverbeke: {name: "Jan Francies Haverbeke", sex: "m", born: 1725, died: 1779, father: "Pieter Bernard Haverbeke", …}Jan Frans van Brussel: {name: "Jan Frans van Brussel", sex: "m", born: 1761, died: 1833, father: "Jacobus Bernardus van Brussel", …}Jan Haverbeke: {name: "Jan Haverbeke", sex: "m", born: 1671, died: 1731, father: "Lieven Haverbeke", …}Jan van Brussel: {name: "Jan van Brussel", sex: "m", born: 1714, died: 1748, father: "Jacobus van Brussel", …}Joanna de Causmaecker: {name: "Joanna de Causmaecker", sex: "f", born: 1762, died: 1807, father: "Bernardus de Causmaecker", …}Joanna de Pape: {name: "Joanna de Pape", sex: "f", born: 1654, died: 1723, father: "Vincent de Pape", …}Laurentia Haverbeke: {name: "Laurentia Haverbeke", sex: "f", born: 1710, died: 1786, father: "Jan Haverbeke", …}Lieven Haverbeke: {name: "Lieven Haverbeke", sex: "m", born: 1631, died: 1676, father: "Pieter Haverbeke", …}Lieven de Causmaecker: {name: "Lieven de Causmaecker", sex: "m", born: 1696, died: 1724, father: "Carel de Causmaecker", …}Lieven van Haverbeke: {name: "Lieven van Haverbeke", sex: "m", born: 1570, died: 1636, father: "Pauwels van Haverbeke", …}Lievijne Jans: {name: "Lievijne Jans", sex: "f", born: 1542, died: 1582, father: null, …}Livina Haverbeke: {name: "Livina Haverbeke", sex: "f", born: 1692, died: 1743, father: "Daniel Haverbeke", …}Livina Sierens: {name: "Livina Sierens", sex: "f", born: 1761, died: 1826, father: "Jan Sierens", …}Maria Haverbeke: {name: "Maria Haverbeke", sex: "m", born: 1905, died: 1997, father: "Emile Haverbeke", …}Maria Sturm: {name: "Maria Sturm", sex: "f", born: 1835, died: 1917, father: "Charles Sturm", …}Maria de Rycke: {name: "Maria de Rycke", sex: "f", born: 1683, died: 1724, father: "Frederik de Rycke", …}Maria van Brussel: {name: "Maria van Brussel", sex: "f", born: 1801, died: 1834, father: "Jan Frans van Brussel", …}Martina de Pape: {name: "Martina de Pape", sex: "f", born: 1666, died: 1727, father: "Vincent de Pape", …}Pauwels van Haverbeke: {name: "Pauwels van Haverbeke", sex: "m", born: 1535, died: 1582, father: "N. van Haverbeke", …}Petronella de Decker: {name: "Petronella de Decker", sex: "f", born: 1731, died: 1781, father: "Pieter de Decker", …}Philibert Haverbeke: {name: "Philibert Haverbeke", sex: "m", born: 1907, died: 1997, father: "Emile Haverbeke", …}Pieter Antone Haverbeke: {name: "Pieter Antone Haverbeke", sex: "m", born: 1753, died: 1798, father: "Jan Francies Haverbeke", …}Pieter Bernard Haverbeke: {name: "Pieter Bernard Haverbeke", sex: "m", born: 1695, died: 1762, father: "Willem Haverbeke", …}Pieter Haverbeke: {name: "Pieter Haverbeke", sex: "m", born: 1602, died: 1642, father: "Lieven van Haverbeke", …}Pieter de Decker: {name: "Pieter de Decker", sex: "m", born: 1705, died: 1780, father: "Joos de Decker", …}Willem Haverbeke: {name: "Willem Haverbeke", sex: "m", born: 1668, died: 1731, father: "Lieven Haverbeke", …}__proto__: Object
+ageDifference(byName["Emma de Milliano"],byName["Sophia van Damme"])
+VM1737:2 Uncaught TypeError: Cannot read property 'born' of undefined
+    at ageDifference (<anonymous>:2:35)
+    at <anonymous>:1:1
+ageDifference @ VM1737:2
+(anonymous) @ VM2133:1
+byName["Emma de Milliano"].born
+1876
+byName["Sophia van Damme"].born
+VM2147:1 Uncaught TypeError: Cannot read property 'born' of undefined
+    at <anonymous>:1:28
+(anonymous) @ VM2147:1
+byName["Sophia van Damme"]
+undefined
+byName["Sophia van Damme"].born
+VM2155:1 Uncaught TypeError: Cannot read property 'born' of undefined
+    at <anonymous>:1:28
+(anonymous) @ VM2155:1

@@ -126,3 +126,43 @@ undefined
 2018-02-16 09:30:37 
 For me the takeaway is the same again: read slowly and carefully. It pays off. Gotta stop here.
 2018-02-16 09:31:59
+2018-02-19 18:53:48
+
+Mother-child age difference
+Using the example data set from this chapter, compute the average age difference between mothers and children (the age of the mother when the child is born). You can use the average function defined earlier in this chapter.
+
+Note that not all the mothers mentioned in the data are themselves present in the array. The byName object, which makes it easy to find a person’s object from their name, might be useful here.
+
+function average(array) {
+  function plus(a, b) { return a + b; }
+  return array.reduce(plus) / array.length;
+}
+
+var byName = {};
+ancestry.forEach(function(person) {
+  byName[person.name] = person;
+});
+
+// Your code here.
+
+// → 31.2
+
+
+
+
+2018-02-19 20:01:12
+could not finish it completely, but the partial result is here:
+function mothersAgeAtBirth(person) {
+    if (!(person.mother === null) && !(byName[person.mother] === undefined))
+        return person.born - mothersBirthYear(person);
+    else
+        return 0;
+}
+undefined
+ancestry.map(mothersAgeAtBirth);
+(39) [31, 0, 0, 0, 31, 0, 0, 0, 42, 0, 0, 38, 0, 28, 0, 36, 22, 39, 0, 28, 0, 29, 0, 0, 0, 20, 24, 0, 0, 29, 39, 0, 27, 35, 0, 39, 0, 0, 25]
+average(ancestry.map(mothersAgeAtBirth));
+14.41025641025641
+
+stopping now.
+2018-02-19 20:01:34
